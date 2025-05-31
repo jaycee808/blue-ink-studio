@@ -1,6 +1,7 @@
 :root {
   --light: #EDEDED;
   --dark: #0A0A0A;
+  --light-gray: #848483;
 }
 
 html,
@@ -26,4 +27,75 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Work Page */
+
+.work-container {
+  padding: 2rem 6rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.work-title {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 4rem;
+  display: inline-block;
+}
+
+.project-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.project-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-image {
+  width: 100%;
+  object-fit: cover;
+  border: 2px solid var(--dark);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.5rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.project-tech {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--light-gray);
+  margin-top: 5px;
+}
+
+.project-link {
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-bottom: 2px solid var(--dark);
+  width: fit-content;
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 2px 6px;
 }

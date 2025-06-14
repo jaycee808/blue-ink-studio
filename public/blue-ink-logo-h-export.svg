@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 789 273" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-79.3038,-3921.65)">
+        <g id="Final-Logo---Horizontal" serif:id="Final Logo - Horizontal" transform="matrix(0.483406,0,0,0.560934,-244.73,3296.72)">
+            <rect x="670.314" y="1114.1" width="1630.66" height="485.443" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="670.314" y="1114.1" width="1630.66" height="485.443"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g id="Horizontal-Logo" serif:id="Horizontal Logo" transform="matrix(2.06865,0,0,1.78274,-2605.55,607.384)">
+                    <g id="blue">
+                        <g transform="matrix(0.916048,0,0,0.873877,1538.98,138.721)">
+                            <rect x="64.823" y="179.989" width="435.177" height="268.954" style="fill:rgb(240,255,255);stroke:rgb(25,18,101);stroke-width:18.62px;"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,1539.94,107.51)">
+                            <g transform="matrix(200,0,0,200,428.908,394.054)">
+                            </g>
+                            <text x="82.662px" y="394.054px" style="font-family:'Anton-Regular', 'Anton';font-size:200px;fill:rgb(25,18,101);">B<tspan x="176.365px 253.857px 346.583px " y="394.054px 394.054px 394.054px ">LUE</tspan></text>
+                        </g>
+                    </g>
+                    <g id="ink" transform="matrix(1,0,0,1,1559.27,-235.111)">
+                        <g transform="matrix(2.56751,0,0,1.45152,205.941,-277.883)">
+                            <rect x="90.279" y="557.347" width="137.837" height="161.921" style="fill:rgb(25,18,101);stroke:rgb(25,18,101);stroke-width:7.99px;"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1.05973,225.272,18.0608)">
+                            <g transform="matrix(1,0,0,1.2,0,-139.737)">
+                                <g transform="matrix(200,0,0,200,469.866,698.685)">
+                                </g>
+                                <text x="218.511px" y="698.685px" style="font-family:'Anton-Regular', 'Anton';font-size:200px;fill:rgb(240,255,255);">I<tspan x="269.823px 375.432px " y="698.685px 698.685px ">NK</tspan></text>
+                            </g>
+                        </g>
+                        <g transform="matrix(8.2004e-17,-1.14658,1.22639,1.4063e-16,-519.974,989.571)">
+                            <g id="studio">
+                                <g>
+                                    <g transform="matrix(1.22169,0,0,1,-44.3326,0)">
+                                        <text x="199.974px" y="1061.37px" style="font-family:'Anton-Regular', 'Anton';font-size:62.795px;fill:none;stroke:rgb(240,255,255);stroke-width:3.17px;stroke-linecap:butt;stroke-miterlimit:2;">STUDIO</text>
+                                    </g>
+                                    <g transform="matrix(1.22169,0,0,1,-44.3326,0)">
+                                        <text x="199.974px" y="1061.37px" style="font-family:'Anton-Regular', 'Anton';font-size:62.795px;fill:rgb(25,18,101);">STUDIO</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

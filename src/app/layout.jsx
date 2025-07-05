@@ -1,5 +1,6 @@
 import './globals.css'
-import LayoutWrapper from './components/LayoutWrapper'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 export const metadata = {
   title: 'Blue Ink Studio',
@@ -10,7 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <LayoutWrapper>{children}</LayoutWrapper>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )

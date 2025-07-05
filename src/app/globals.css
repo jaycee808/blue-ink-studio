@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bonheur+Royale&family=Ephesis&family=Explora&family=Freehand&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Island+Moments&family=Qwigley&display=swap');
 
 :root {
-  --light: #F0FFFF;
-  --dark: #0A0A0A;
+  --white: #F0FFFF;
+  --black: #0A0A0A;
   --light-gray: #848483;
   --blue: #191265;
 }
@@ -13,8 +13,6 @@ body {
 }
 
 body {
-  color: var(--light);
-  background: var(--blue);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -34,8 +32,19 @@ a {
 
 .hero-container {
   display: flex;
+  height: 100dvh;
+  /* flex-direction: column;
+  margin: 6rem 1rem; */
+}
+
+.hero-main {
+  display: flex;
+  flex: 9;
   flex-direction: column;
-  margin: 6rem 1rem;
+  justify-content: center;
+  padding: 6rem 4rem;
+  background: var(--blue);
+  color: var(--white);
 }
 
 .hero-content {
@@ -49,25 +58,18 @@ a {
   height: auto;
 }
 
-.hero-tagline-cta-container {
+.hero-cta-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin: 3rem 2rem 0rem 2rem;
 }
 
-.hero-tagline {
-  font-family: 'Inter', sans-serif;
-  font-weight: bold;
-  font-size: 3rem;
-  letter-spacing: -2px;
-}
-
 .hero-cta {
-  padding: 1rem 10rem;
+  padding: 1rem 2rem;
   background: transparent;
-  border: 2px solid var(--light);
-  color: var(--light);
+  border: 2px solid var(--white);
+  color: var(--white);
   font-family: 'Inter', sans-serif;
   font-weight: bold;
   font-size: 4rem;
@@ -78,8 +80,8 @@ a {
 }
 
 .hero-cta:hover {
-  background: var(--dark);
-  color: var(--light);
+  background: var(--white);
+  color: var(--blue);
 }
 
 @media (max-width: 768px) {
@@ -89,17 +91,11 @@ a {
     margin: 3rem 1rem;
   }
 
-
-  .hero-tagline-cta-container {
+  .hero-cta-container {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
     margin: 2rem 1rem 0 1rem;
-  }
-
-  .hero-tagline {
-    font-size: 2rem;
-    letter-spacing: -1px;
   }
 
   .hero-cta {
@@ -107,6 +103,29 @@ a {
     padding: 1rem 2rem;
     align-self: flex-start;
   }
+}
+
+/* Hero Tagline */
+
+.hero-tagline-section {
+  background: var(--white);
+  color: var(--blue);
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+}
+
+.hero-tagline-vertical {
+  font-family: 'Anton', sans-serif;
+  font-size: 4.5rem;
+  letter-spacing: 6px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
 
 /* Landing Page - Logo Display */

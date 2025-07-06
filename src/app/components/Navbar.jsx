@@ -9,7 +9,7 @@ export default function Navbar() {
             <Link href="/">
                 <div className="logo-image">
                     <Image
-                    src="/blue-ink-logo.svg"
+                    src="/blue-ink-logo.png"
                     alt="Blue Ink Studio Logo"
                     fill
                     className="logo-img"

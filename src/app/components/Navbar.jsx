@@ -1,15 +1,30 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
     return (
-        <nav>
-        <Link href="/">Blue Ink Studio</Link>
-        <div>
+        <nav className="navbar">
+        <div className="navbar-container">
+            <div className="logo">
+            <Link href="/">
+                <div className="logo-image">
+                    <Image
+                    src="/logo/blue-ink-logo.svg"
+                    alt="Blue Ink Studio Logo"
+                    fill
+                    className="logo-img"
+                    priority
+                    />
+                </div>
+            </Link>
+            </div>
+            <div className="nav-links">
             <Link href="/about">About</Link>
             <Link href="/services">Services</Link>
-            <Link href="/work">Work</Link>
+            <Link href="/portfolio">Portfolio</Link>
             <Link href="/contact">Contact</Link>
+            </div>
         </div>
         </nav>
-    )
+    );
 }

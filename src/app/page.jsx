@@ -1,7 +1,17 @@
-export default function Home() {
+import Hero from './components/Hero';
+import AboutHero from './components/AboutHero';
+import ServicesGrid from './components/ServicesGrid';
+import PortfolioHero from './components/PortfolioHero';
+import ContactHero from './components/ContactHero';
+
+export default function HomePage() {
   return (
-    <section>
-      <h1>Inked with Intent.</h1>
-    </section>
-  )
+    <main>
+      <Hero />
+      <AboutHero />
+      <ServicesGrid />
+      {/* <PortfolioHero /> */}
+      <ContactHero />
+    </main>
+  );
 }

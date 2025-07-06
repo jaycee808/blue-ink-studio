@@ -1,20 +1,20 @@
-import './globals.css'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import './globals.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 export const metadata = {
   title: 'Blue Ink Studio',
   description: 'Inked with Intent.',
-}
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
         <Navbar />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
-  )
+  );
 }

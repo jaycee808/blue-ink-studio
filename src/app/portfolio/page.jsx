@@ -21,7 +21,7 @@ async function getProjects() {
     return await projectClient.fetch(query)
 }
 
-export default async function WorkPage() {
+export default async function PortfolioPage() {
     const projects = await getProjects()
 
     return (

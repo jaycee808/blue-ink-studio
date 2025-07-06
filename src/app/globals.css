@@ -17,7 +17,7 @@
 }
 
 html, body {
-  background: url('../../public/background/hero-bg.png');
+  background: url('/hero-bg.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;

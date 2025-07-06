@@ -17,17 +17,22 @@
 }
 
 html, body {
-  background: url('/hero-bg.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: #F0FFFF;
   overflow-x: hidden;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Navbar and Hero Background Image */
+
+.hero-bg-wrapper {
+  background: url('/hero-bg.png') center center no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: var(--blue);
 }
 
 /* Navbar */

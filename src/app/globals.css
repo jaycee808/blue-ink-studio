@@ -5,6 +5,8 @@
   --black: #000815;
   --blue: #002052;
   --gray: #CDCFDB;
+  --ivory: #FBF8F4;
+  --light-gray: #FFF6F6;
   --light-blue: #6699CC;
   --blue-gray: #1F3B4D;
   --dark-blue: #00112E;
@@ -286,7 +288,7 @@ a {
 /* Hero - About Section */
 
 .about-section {
-  background-color: var(--white);
+  background-color: #FFFFFF;
   padding: 6rem 1.5rem;
   font-family: 'Inter Tight', sans-serif;
   color: var(--black);
@@ -360,6 +362,12 @@ a {
 /* Hero - Services Section */
 
 .services-section {
+  background: url('/bg-geo-white-3.png') center center no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+
   background-color: var(--gray);
   padding: 6rem 1.5rem;
   font-family: 'Inter Tight', sans-serif;

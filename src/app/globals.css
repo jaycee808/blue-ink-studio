@@ -145,7 +145,7 @@ a {
   width: 100%;
 }
 
-/* Left Column */
+/* Hero - Left Column */
 
 .hero-left {
   display: flex;
@@ -192,7 +192,7 @@ a {
   color: var(--gray);
 }
 
-/* Right Column */
+/* Hero - Right Column */
 
 .hero-right {
   display: flex;
@@ -238,6 +238,49 @@ a {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 2rem;
+}
+
+/* Hero Banner Media Queries */
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 8rem 1.25rem;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-left {
+    display: none;
+  }
+
+  .hero-right {
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    text-align: left;
+  }
+
+  .hero-description {
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 1rem;
+  }
+
+  .hero-description p {
+    max-width: none;
+  }
+
+  .scroll-cue {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+  }
 }
 
 /* Hero - About Section */
@@ -304,8 +347,8 @@ a {
 
 .about-me p,
 .about-approach p {
-  font-size: 1.5rem;
-  line-height: 1.4;
+  font-size: 1.25rem;
+  line-height: 1.7;
   color: var(--black);
   max-width: 75ch;
 }

@@ -7,7 +7,7 @@ import ContactHero from './components/ContactHero';
 export default function HomePage() {
   return (
     <main>
-      {/* <Hero /> */}
+      <Hero />
       <AboutHero />
       <ServicesGrid />
       {/* <PortfolioHero /> */}

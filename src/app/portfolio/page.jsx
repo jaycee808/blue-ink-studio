@@ -7,7 +7,9 @@ async function getProjects() {
         _id,
         title,
         slug,
+        subheading,
         description,
+        services,
         tech,
         url,
         image {
@@ -25,31 +27,44 @@ export default async function PortfolioPage() {
     const projects = await getProjects()
 
     return (
-        <section className="work-container">
-        <h1 className="work-title">My Work</h1>
-        <div className="project-display">
-            {projects.map((project) => (
-            <div key={project._id} className="project-image-container">
-                <img
-                src={project.image?.asset?.url}
-                alt={project.title}
-                className="project-image"
-                />
-                <h2 className="project-title">{project.title}</h2>
-                <p className="project-description">{project.description}</p>
-                <p className="project-tech">{project.tech?.join(', ')}</p>
-                {project.url && (
-                <a
-                    href={project.url}
-                    className="project-link"
-                    target="_blank"
-                >
-                    View Project →
-                </a>
-                )}
+        <section className="portfolio-section">
+            <div className="portfolio-container">
+                <h1 className="portfolio-title">Portfolio</h1>
+
+                <div className="portfolio-stack">
+                    {projects.map((project) => (
+                        <div key={project._id} className="project-block">
+                            <h2 className="project-heading">{project.title}</h2>
+                            {project.subheading && (
+                                <p className="project-subheading">{project.subheading}</p>
+                            )}
+                            <div className="project-split">
+                                <div className="project-image-wrapper">
+                                <img 
+                                    src={project.image?.asset?.url}
+                                    alt={project.title}
+                                
+                                    className="project-image"
+                                />
+                                </div>
+                                <div className="project-content">
+                                <p className="project-description">{project.description}</p>
+
+                                <p className="project-services">{project.services?.join(' / ')}</p>
+                                <p className="project-tech">{project.tech?.join(', ')}</p>
+
+                                {project.url && (
+                                    <a href={project.url} className="project-link" target="_blank">
+                                    View Project →
+                                    </a>
+                                )}
+                                </div>
+                            </div>
+                        </div>
+
+                    ))}
+                </div>
             </div>
-            ))}
-        </div>
         </section>
     )
 }

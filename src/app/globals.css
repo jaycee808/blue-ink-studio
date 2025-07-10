@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Island+Moments&display=swap');
 
 :root {
-  --white: #F0FFFF;
-  --black: #000815;
+  --white: #F7F9FC;
+  --black: #0A0A0A;
   --blue: #002052;
-  --gray: #CDCFDB;
-  --ivory: #FBF8F4;
-  --light-gray: #FFF6F6;
-  --light-blue: #6699CC;
+  --gray: #D5D7E0;
+  --light-gray: #F7F7F7;
+  --mid-gray: #404040;
+  --light-blue: #5A8AC4;
   --blue-gray: #1F3B4D;
   --dark-blue: #00112E;
 }
@@ -282,7 +282,7 @@ a {
 /* Hero - About Section */
 
 .about-section {
-  background-color: #FFFFFF;
+  background-color: var(--white);
   padding: 6rem 1.5rem;
   font-family: 'Inter Tight', sans-serif;
   color: var(--black);
@@ -356,7 +356,7 @@ a {
 /* Hero - Services Section */
 
 .services-section {
-  background: url('/bg-geo-white-3.png') center center no-repeat;
+  background: url('/bg-services-grid.png') center center no-repeat;
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -586,14 +586,15 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  border-top: 2px solid var(--blue-gray);
-  padding-top: 4rem;
+  padding: 4rem;
+  background: var(--white);
+  /* border-radius: 6px; */
 }
 
 .project-heading {
   font-family: 'Antonio', sans-serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
-  color: var(--white);
+  color: var(--blue);
   text-transform: uppercase;
   line-height: 1.1;
   padding-left: 0.25rem;
@@ -602,7 +603,7 @@ a {
 .project-subheading {
   font-family: 'Antonio', sans-serif;
   font-size: 1.5rem;
-  color: var(--gray);
+  color: var(--blue-gray);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: -0.5rem;
@@ -612,6 +613,14 @@ a {
 @media (max-width: 768px) {
   .project-subheading {
     font-size: 1.25rem;
+  }
+
+  .portfolio-stack {
+    gap: 2rem;
+  }
+
+  .project-block {
+    padding: 1rem;
   }
 }
 
@@ -649,27 +658,78 @@ a {
   gap: 1.25rem;
 }
 
+.overview-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .project-description {
   font-size: 1.5rem;
   font-family: 'Inter', sans-serif;
   line-height: 1.7;
-  color: var(--white);
+  color: var(--black);
   max-width: 65ch;
 }
 
-.project-services,
+/* Portfolio Projects - Meta Section */
+
+/* .project-services,
 .project-tech {
   font-size: 1.25rem;
   font-family: 'Antonio', sans-serif;
   text-transform: uppercase;
-  color: var(--light-blue);
+  color: var(--blue-gray);
   letter-spacing: 1px;
+} */
+
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
+
+.meta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.meta-title {
+  font-family: 'Antonio', sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--mid-gray);
+  padding-left: 0.1rem;
+}
+
+.meta-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--black);
+  max-width: 60ch;
+}
+
+@media (max-width: 768px) {
+  .meta-title {
+    font-size: 1.1rem;
+  }
+
+  .meta-text {
+    font-size: 1rem;
+  }
+}
+
+/* Portfolio Projects - Link */
 
 .project-link {
   font-family: 'Antonio', sans-serif;
   font-size: 1.5rem;
   color: var(--white);
+  background: var(--dark-blue);
+  padding: 0.5rem 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-top: 0.5rem;
@@ -677,19 +737,8 @@ a {
   width: fit-content;
 }
 
-.project-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 1px;
+.project-link:hover {
   background-color: var(--light-blue);
-  transition: background-color 0.3s ease;
-}
-
-.project-link:hover::after {
-  background-color: var(--gray);
 }
 
 /* Project Content Media Queries */ 
@@ -711,6 +760,8 @@ a {
   .project-link {
     font-size: 1.25rem;
     color: var(--white);
+    width: 100%;
+    text-align: center;
   }
 }
 

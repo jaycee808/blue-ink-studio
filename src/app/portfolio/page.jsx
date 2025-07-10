@@ -48,10 +48,20 @@ export default async function PortfolioPage() {
                                 />
                                 </div>
                                 <div className="project-content">
-                                <p className="project-description">{project.description}</p>
-
-                                <p className="project-services">{project.services?.join(' / ')}</p>
-                                <p className="project-tech">{project.tech?.join(', ')}</p>
+                                    <div className="overview-block">
+                                        <h3 className="meta-title">Overview</h3>
+                                        <p className="project-description">{project.description}</p>
+                                    </div>
+                                <div className="project-meta">
+                                    <div className="meta-block">
+                                        <h3 className="meta-title">Services</h3>
+                                        <p className="meta-text">{project.services?.join(' / ')}</p>
+                                    </div>
+                                    <div className="meta-block">
+                                        <h3 className="meta-title">Tech Stack</h3>
+                                        <p className="meta-text">{project.tech?.join(', ')}</p>
+                                    </div>
+                                    </div>
 
                                 {project.url && (
                                     <a href={project.url} className="project-link" target="_blank">

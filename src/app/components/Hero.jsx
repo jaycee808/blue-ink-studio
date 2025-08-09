@@ -10,7 +10,9 @@ export default function Hero() {
             </div>
             <div className="feature-block">
                 <p className="feature-label">Featured Work</p>
-                <p className="feature-title">Atlas →</p>
+                <p className="feature-title">Metrica</p>
+                <p className="feature-title">Atlas</p>
+                <p className="feature-title">4WARD2GETHER</p>
             </div>
             </div>
 
@@ -18,7 +20,7 @@ export default function Hero() {
             <div className="hero-right">
             <h1 className="hero-title">Digital Design<br />With Purpose</h1>
             <div className="hero-description">
-                <p>Blue Ink Studio is an independent design and development studio built with purpose.</p>
+                <p>Blue Ink Studio is an independent design and development studio built with intent.</p>
                 <p>From portfolio sites to brand identities, each digital space is crafted to feel intentional, striking, and bold.</p>
             </div>
 

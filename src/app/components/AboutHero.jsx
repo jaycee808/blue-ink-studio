@@ -2,42 +2,71 @@ export default function AboutHero() {
     return (
         <section className="about-section">
         <div className="about-container">
-            {/* About Hero - Left Column */}
-            <div className="about-left">
-            <h2 className="section-title">Turning Ideas into Identities</h2>
-            <p className="intro-text">
-                At the core of Blue Ink Studio is a belief in thoughtful development and design.
-                Whether it’s a brand launch, portfolio site, or something entirely new, every project is crafted with care and clarity.
-                Turning ideas into identities that feel distinct, honest, and bold.
-            </p>
+
+            {/* About - Header */}
+            <div className="about-intro">
+            <h2 className="section-title intro-title">Turning Ideas into Identities</h2>
+            <div className="intro-cols">
+                <p className="intro-text">Blue Ink Studio is built on thoughtful design and development.</p>
+                <p className="intro-text">From brand launches to bold portfolio sites, every project is crafted with care, clarity, and a distinct voice.</p>
+            </div>
             </div>
 
-            {/* About Hero - Right Column */}
-            <div className="about-right">
-            <div className="about-me">
+            {/* About Column Display: Left - About + Studio Meta, Right = Approach */}
+            <div className="about-body">
+            {/* Left Column */}
+            <div className="about-leftcol">
+                <div className="about-me">
                 <h3 className="subsection-title">About Me</h3>
                 <p>
-                Hello, I’m Jamie – the designer, developer, and creative mind behind Blue Ink Studio.
-                With a background in front-end development and a deep love for visual storytelling,
-                I built this studio to merge technical skills with expressive, purpose-led design.
+                    Hi, I’m Jamie. The designer, developer, and creative mind behind Blue Ink Studio.
+                    With a background in front-end development and a love for visual storytelling.
+                    I created Blue Ink to merge technical skill with expressive, purpose-led design.
                 </p>
+                </div>
+
+                {/* Studio Meta */}
+                <div className="studio-meta">
+                <div className="tagline-block">
+                    <p className="tagline">Inked with Intent</p>
+                    <p className="tag-subtext">Independent design & development studio</p>
+                </div>
+
+                <div className="principles-block">
+                    <div className="principle"><span className="principle-number">01</span> Intentional</div>
+                    <div className="principle"><span className="principle-number">02</span> Bold</div>
+                    <div className="principle"><span className="principle-number">03</span> Functional</div>
+                </div>
+                </div>
             </div>
 
+            {/* Right Column */}
             <div className="about-approach">
                 <h3 className="subsection-title">My Approach</h3>
+                <p>I believe great design is:</p>
+
+                <div className="approach-grid">
+                <div className="approach-card">
+                    <h4 className="approach-title">Structured</h4>
+                    <p className="approach-desc">Clean grids and clear hierarchy</p>
+                </div>
+                <div className="approach-card">
+                    <h4 className="approach-title">Intentional</h4>
+                    <p className="approach-desc">Every detail has a reason</p>
+                </div>
+                <div className="approach-card">
+                    <h4 className="approach-title">Bold</h4>
+                    <p className="approach-desc">Visuals with lasting impact</p>
+                </div>
+                </div>
+
                 <p>
-                I believe great design is built on structure, intention, and a little experimentation.
-                Every project begins with a conversation about your goals, your audience, and what makes your brand tick.
-                From there, I move through a collaborative process that blends clean code, bold visuals, and purposeful layout choices.
-                </p>
-                <p>
-                I draw inspiration from Swiss graphic design, editorial layouts, and bold visuals.
-                Every project is tailored to suit your brand’s voice.
-                Whether it’s creating a visual identity from scratch or refining an existing one,
-                I focus on making sure every detail has a reason for being there.
+                Inspired by Swiss graphic design and editorial layouts, I tailor each project to your brand’s voice.
+                Whether that's creating an identity from scratch or refining an existing one.
                 </p>
             </div>
             </div>
+
         </div>
         </section>
     );

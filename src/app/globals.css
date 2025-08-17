@@ -163,28 +163,31 @@ a {
   margin-top: 0.5rem;
 }
 
-.feature-block {
+/* Core Principles Styles */
+
+.principles-block {
   border-top: 1px solid var(--gray);
   padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.feature-label {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  color: var(--gray);
-  margin-bottom: 0.25rem;
-}
-
-.feature-title {
+.principle {
   font-size: 1.2rem;
   color: var(--white);
   font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s ease;
+  letter-spacing: -0.2px;
 }
 
-.feature-title:hover {
-  color: var(--light-blue);
+.principle span {
+  font-size: 0.9rem;
+  font-family: 'Antonio', sans-serif;
+  color: var(--gray);
+  margin-right: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Hero - Right Column */
@@ -222,20 +225,42 @@ a {
   max-width: 32ch;
 }
 
-/* Scroll Cue */
+/* CTA Buttons */
 
-.scroll-cue {
-  font-size: 1rem;
-  color: var(--gray);
+.hero-buttons {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 2rem;
+  gap: 1rem;
 }
 
-/* Hero Banner Media Queries */
+.hero-button-primary,
+.hero-button-secondary {
+  display: inline-flex;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  font-family: 'Antonio', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.hero-button-primary {
+  background: var(--white);
+  color: var(--blue);
+  box-shadow: 0 2px 0 rgba(0,0,0,.15);
+}
+
+.hero-button-secondary {
+  border: 1px solid var(--white);
+  color: var(--white);
+  background: transparent;
+}
+
+.hero-button-secondary:hover {
+  background: rgba(255,255,255,.08);
+}
+
+/* Hero Media Queries */
 
 @media screen and (max-width: 768px) {
   .hero-section {
@@ -258,7 +283,7 @@ a {
   }
 
   .hero-title {
-    font-size: clamp(2rem, 8vw, 3rem);
+    font-size: clamp(3rem, 8vw, 4rem);
     text-align: left;
   }
 
@@ -266,15 +291,23 @@ a {
     flex-direction: column;
     font-size: 1rem;
     gap: 1rem;
+    max-width: 28ch;
   }
 
   .hero-description p {
     max-width: none;
   }
 
-  .scroll-cue {
-    margin-top: 1.5rem;
-    font-size: 0.875rem;
+  .hero-buttons {
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .hero-button-primary,
+  .hero-button-secondary {
+    font-size: 1.25rem;
+    padding: 0.5rem 0.75rem;
   }
 }
 

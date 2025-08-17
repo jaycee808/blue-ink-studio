@@ -8,9 +8,9 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
-      <AboutHero />
       <ServicesGrid />
-      {/* <PortfolioHero /> */}
+      <PortfolioHero />
+      <AboutHero />
       <ContactHero />
     </main>
   );

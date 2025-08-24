@@ -126,9 +126,7 @@ a {
 
 @media only screen and (max-width: 400px) {
   .nav-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 1rem;
   }
 }
 

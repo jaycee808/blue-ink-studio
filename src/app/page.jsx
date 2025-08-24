@@ -9,7 +9,7 @@ export default function HomePage() {
     <main>
       <Hero />
       <ServicesGrid />
-      <PortfolioHero />
+      {/* <PortfolioHero /> */}
       <AboutHero />
       <ContactHero />
     </main>

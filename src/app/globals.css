@@ -33,8 +33,9 @@ a {
   background: url('/hero-bg.png');
   background-position: top;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-attachment: local, scroll;
+  background-size: cover;
+  /* background-attachment: local, scroll; */
+  background-attachment: fixed;
   background-color: var(--blue);
 }
 

@@ -8,8 +8,8 @@ export default function ServicesGrid() {
             <span className="section-label">SERVICES</span>
 
             {/* Header & Intro */}
-            <h2 className="section-title">Design. Code. Intent.</h2>
-            <p className="services-intro">Web design, development, and visual identity for bold brands and creative thinkers. From visuals to functionality, each project is tailored to suit your needs.</p>
+            <h2 className="section-title">What I Offer</h2>
+            <p className="services-intro">I design, develop, and create visual identities for bold brands and creative thinkers. From visuals to functionality, each project is tailored to suit your needs.</p>
 
             {/* Services Grid */}
             <div className="services-grid">

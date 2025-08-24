@@ -30,7 +30,7 @@ export default async function PortfolioPage() {
         <section className="portfolio-full-section">
         <div className="portfolio-full-container">
             <span className="portfolio-full-label">Portfolio</span>
-            <h1 className="portfolio-full-title">Built with Bold Intent</h1>
+            <h1 className="portfolio-full-title">Built to be Bold</h1>
             <p className="portfolio-full-intro">
                 A curated selection of projects across design, development, and creative direction.
             </p>

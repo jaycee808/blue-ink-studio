@@ -53,15 +53,14 @@ export default function Services() {
             <span className="packages-full-label">Packages</span>
             <h2 className="packages-full-title">Inked with Intent</h2>
             <p className="packages-full-intro">
-                Every brand has a different starting point. Whether you’re lighting the spark, levelling up, or
-                fully establishing your online presence – there’s a package to suit your vision.
+                Every brand has a different starting point. Whether you’re lighting the spark, levelling up, or fully establishing your online presence.There’s a package to suit your vision.
             </p>
             </div>
 
             <div className="packages-full-stack">
             <div className="packages-full-item">
                 <div className="packages-full-header">
-                    <span className="packages-full-number">Ignite</span>
+                    <span className="packages-full-label">Ignite</span>
                     <h2 className="packages-full-heading">A bold beginning for new brands and creatives.</h2>
                 </div>
                 <div className="packages-full-split">
@@ -87,7 +86,7 @@ export default function Services() {
 
             <div className="packages-full-item">
                 <div className="packages-full-header">
-                    <span className="packages-full-number">Elevate</span>
+                    <span className="packages-full-label">Elevate</span>
                     <h2 className="packages-full-heading">Level up your online presence with intention.</h2>
                 </div>
                 <div className="packages-full-split">
@@ -112,7 +111,7 @@ export default function Services() {
 
             <div className="packages-full-item">
                 <div className="packages-full-header">
-                    <span className="packages-full-number">Establish</span>
+                    <span className="packages-full-label">Establish</span>
                     <h2 className="packages-full-heading">A fully-formed brand presence – clear, confident, and built to last.</h2>
                 </div>
                 <div className="packages-full-split">
@@ -141,7 +140,7 @@ export default function Services() {
 
             <div className="packages-full-cta">
             <p className="packages-full-intro">
-                Not every project fits inside a box. If you’re looking for something a little different – just get in touch for a tailored proposal.
+                Not every project fits inside a box. If you’re looking for something a little different - just get in touch for a tailored proposal.
             </p>
             </div>
         </div>

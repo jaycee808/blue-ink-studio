@@ -97,7 +97,7 @@ a {
   font-family: 'Antonio', sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -182,7 +182,7 @@ a {
   max-width: 45ch;
   font-weight: 300;
   line-height: 1.4;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 /* Hero Buttons */
@@ -282,7 +282,7 @@ a {
   font-family: 'Anton', sans-serif;
   font-size: clamp(2.5rem, calc(3.8vw + 1.00rem), 4.5rem);
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--blue);
   max-width: 12ch;
 }
@@ -296,7 +296,7 @@ a {
 .about-col-left .intro-text {
   font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
   line-height: 1.7;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   max-width: 32ch;
 }
 
@@ -348,7 +348,7 @@ a {
 .about-approach p {
   font-size: clamp(1.1rem, calc(0.60vw + 1rem), 1.25rem);
   line-height: 1.6;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   max-width: 60ch;
   color: var(--black);
 }
@@ -391,7 +391,7 @@ a {
 .approach-desc {
   margin: 0;
   font-size: clamp(1rem, calc(0.60vw + 1rem), 1.1rem);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   line-height: 1.6;
   color: var(--black);
 }
@@ -506,7 +506,7 @@ a {
   font-family: 'Anton', sans-serif;
   font-size: clamp(2.5rem, calc(3.8vw + 1.00rem), 4.5rem);
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--blue);
   margin-bottom: 0.5rem;
 }
@@ -516,7 +516,7 @@ a {
   color: var(--black);
   margin-bottom: 2rem;
   line-height: 1.6;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--black);
   max-width: 50ch;
 }
@@ -554,7 +554,7 @@ a {
 
 .service-item p {
   font-size: clamp(1.1rem, calc(0.60vw + 1rem), 1.25rem);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   line-height: 1.6;
   color: var(--black);
 }
@@ -651,7 +651,7 @@ a {
   font-family: 'Antonio', sans-serif;
   font-size: clamp(2.5rem, calc(3.8vw + 1.00rem), 4.5rem);
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--white);
   text-transform: uppercase;
   max-width: 15ch;
@@ -669,7 +669,7 @@ a {
   font-family: 'Anton', sans-serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--white);
 }
 
@@ -762,7 +762,7 @@ a {
   font-family: 'Anton', sans-serif;
   font-size: clamp(2.5rem, calc(3.8vw + 1.00rem), 4.5rem);
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--blue);
 }
 
@@ -770,7 +770,7 @@ a {
   font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
   line-height: 1.7;
   max-width: 40ch;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--black);
 }
 
@@ -896,7 +896,7 @@ a {
   line-height: 1.7;
   color: var(--black);
   max-width: 40ch;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 /* Project Details - Services & Tech Stack */
@@ -925,7 +925,7 @@ a {
   font-family: 'Inter', sans-serif;
   font-size: clamp(1.1rem, calc(0.60vw + 1rem), 1.25rem);
   max-width: 30ch;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--black);
   line-height: 1.5;
 }
@@ -1024,14 +1024,14 @@ a {
   font-family: 'Anton', sans-serif;
   font-size: clamp(2.5rem, calc(3.8vw + 1.00rem), 4.5rem);
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--blue);
 }
 
 .services-full-intro {
   font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
   line-height: 1.7;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   max-width: 45ch;
   color: var(--black);
 }
@@ -1073,7 +1073,7 @@ a {
 
 .services-full-item p {
   font-size: clamp(1.1rem, calc(0.60vw + 1rem), 1.25rem);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   line-height: 1.6;
   color: var(--black);
 }
@@ -1168,7 +1168,7 @@ a {
 
 .packages-full-text p {
   font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   line-height: 1.6;
   color: var(--black);
   max-width: 45ch;
@@ -1177,7 +1177,7 @@ a {
 .packages-full-meta {
   font-style: italic;
   font-size: clamp(0.75rem, calc(0.9vw + 1.05rem), 1rem);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   margin-top: 0.75rem;
 }
 
@@ -1185,7 +1185,7 @@ a {
   list-style-type: circle;
   padding-left: 1.25rem;
   font-size: clamp(1.1rem, calc(0.60vw + 1rem), 1.25rem);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   line-height: 1.6;
   color: var(--black);
 }
@@ -1209,7 +1209,7 @@ a {
   font-family: 'Anton', sans-serif;
   font-size: clamp(2.5rem, calc(3.8vw + 1.00rem), 4.5rem);
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--blue);
 }
 
@@ -1217,7 +1217,7 @@ a {
   font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
   font-weight: 400;
   line-height: 1.6;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--black);
   max-width: 44ch;
 }
@@ -1280,7 +1280,7 @@ a {
   font-family: 'Anton', sans-serif;
   font-size: clamp(2.5rem, calc(3.8vw + 1.00rem), 4.5rem);
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--blue);
 }
 
@@ -1288,13 +1288,13 @@ a {
   font-family: 'Anton', sans-serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--blue);
 }
 
 .contact-intro {
   font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   line-height: 1.6;
   max-width: 35ch;
   color: var(--black);
@@ -1368,7 +1368,7 @@ a {
 .contact-form textarea {
   font-family: 'Inter Tight', sans-serif;
   font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   padding: 0.9rem 0.95rem;
   background-color: var(--white);
   border: 2px solid var(--blue-gray);
@@ -1477,7 +1477,7 @@ a {
   font-family: 'Anton', sans-serif;
   font-size: clamp(2.5rem, 6vw, 4rem);
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--blue);
 }
 
@@ -1539,7 +1539,7 @@ a {
   font-family: 'Anton', sans-serif;
   font-size: clamp(2.25rem, 6vw, 3.5rem);
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
   color: var(--white);
 }
 

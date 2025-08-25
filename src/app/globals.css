@@ -761,7 +761,7 @@ a {
 
 .portfolio-full-title {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(3rem, calc(5.2vw + 1.00rem), 6rem);
+  font-size: clamp(2.5rem, calc(3.8vw + 1.00rem), 4.5rem);
   line-height: 1.1;
   letter-spacing: -1px;
   color: var(--blue);
@@ -1241,7 +1241,7 @@ a {
 
 .contact-page-label {
   font-family: 'Antonio', sans-serif;
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, calc(0.9vw + 1.05rem), 1.25rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--blue-gray);
@@ -1272,7 +1272,7 @@ a {
 
 .contact-page-title {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.5rem, calc(3.8vw + 1.00rem), 4.5rem);
   line-height: 1.1;
   letter-spacing: -1px;
   color: var(--blue);
@@ -1287,8 +1287,10 @@ a {
 }
 
 .contact-intro {
-  font-size: clamp(1.1rem, 1.3vw, 1.25rem);
-  max-width: 62ch;
+  font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
+  letter-spacing: -1px;
+  line-height: 1.6;
+  max-width: 35ch;
   color: var(--black);
 }
 
@@ -1350,16 +1352,17 @@ a {
 
 .form-group label {
   font-family: 'Antonio', sans-serif;
-  font-size: 0.9rem;
+  font-size: clamp(0.75rem, calc(0.9vw + 1.05rem), 1.25rem);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   color: var(--dark-blue);
 }
 
 .contact-form input,
 .contact-form textarea {
   font-family: 'Inter Tight', sans-serif;
-  font-size: 1.05rem;
+  font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
+  letter-spacing: -1px;
   padding: 0.9rem 0.95rem;
   background-color: var(--white);
   border: 2px solid var(--blue-gray);
@@ -1383,29 +1386,27 @@ a {
 
 .submit-button {
   background-color: var(--blue);
+  border: 2px solid var(--blue);
   color: var(--white);
   font-family: 'Antonio', sans-serif;
-  font-size: 0.95rem;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding: 0.75rem 1.25rem;
+  padding: 1rem 1.5rem;
+  width: 100%;
   border: none;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.02s ease;
 }
 
 .submit-button:hover { 
-  background-color: var(--light-blue); 
+  background-color: var(--light-blue);
   color: var(--black); 
 }
 
 .submit-button:disabled {
   opacity: 0.65;
   cursor: not-allowed;
-}
-
-.submit-button:active {
-  transform: translateY(1px);
 }
 
 .form-status {

@@ -182,6 +182,7 @@ a {
   max-width: 45ch;
   font-weight: 300;
   line-height: 1.4;
+  letter-spacing: -1px;
 }
 
 /* Hero Buttons */
@@ -295,7 +296,7 @@ a {
 .about-col-left .intro-text {
   font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
   line-height: 1.7;
-  font-weight: 400;
+  letter-spacing: -1px;
   max-width: 32ch;
 }
 
@@ -317,7 +318,7 @@ a {
 
 .about-block {
   display: grid;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .block-head {
@@ -337,7 +338,7 @@ a {
 .block-title {
   font-family: 'Antonio', sans-serif;
   font-weight: 700;
-  font-size: clamp(1.5rem, calc(1.6vw + 1rem), 2.25rem);
+  font-size: clamp(1.25rem, calc(1.6vw + 1rem), 1.5rem);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   color: var(--blue);
@@ -345,8 +346,9 @@ a {
 
 .block-body,
 .about-approach p {
-  font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
+  font-size: clamp(1.1rem, calc(0.60vw + 1rem), 1.25rem);
   line-height: 1.6;
+  letter-spacing: -1px;
   max-width: 60ch;
   color: var(--black);
 }
@@ -356,8 +358,7 @@ a {
 .approach-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
-  margin: 1rem 0 1.25rem;
+  gap: 1rem;
 }
 
 @media (min-width: 900px) {
@@ -390,6 +391,7 @@ a {
 .approach-desc {
   margin: 0;
   font-size: clamp(1rem, calc(0.60vw + 1rem), 1.1rem);
+  letter-spacing: -1px;
   line-height: 1.6;
   color: var(--black);
 }
@@ -515,6 +517,7 @@ a {
   color: var(--black);
   margin-bottom: 2rem;
   line-height: 1.6;
+  letter-spacing: -1px;
   color: var(--black);
   max-width: 50ch;
 }
@@ -551,7 +554,8 @@ a {
 }
 
 .service-item p {
-  font-size: 1.25rem;
+  font-size: clamp(1.1rem, calc(0.60vw + 1rem), 1.25rem);
+  letter-spacing: -1px;
   line-height: 1.6;
   color: var(--black);
 }
@@ -749,7 +753,7 @@ a {
 
 .portfolio-full-label {
   font-family: 'Antonio', sans-serif;
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, calc(0.9vw + 1.05rem), 1.25rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--blue-gray);
@@ -757,18 +761,18 @@ a {
 
 .portfolio-full-title {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(3rem, calc(5.2vw + 1.00rem), 6rem);
   line-height: 1.1;
   letter-spacing: -1px;
   color: var(--blue);
 }
 
 .portfolio-full-intro {
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
   line-height: 1.7;
-  max-width: 60ch;
-  color: var(--mid-gray);
+  max-width: 40ch;
+  letter-spacing: -1px;
+  color: var(--black);
 }
 
 /* Portfolio Projects Container */
@@ -793,8 +797,7 @@ a {
 
 .portfolio-display-heading {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(3rem, 5vw, 5rem);
-  text-transform: uppercase;
+  font-size: clamp(2.5rem, calc(3.8vw + 1.00rem), 4.5rem);
   color: var(--blue);
   line-height: 1.7;
   border-bottom: 1px solid var(--mid-gray)
@@ -802,7 +805,7 @@ a {
 
 .portfolio-display-subheading {
   font-family: 'Antonio', sans-serif;
-  font-size: clamp(0.75rem, 4vw, 1.5rem);
+  font-size: clamp(0.75rem, calc(0.9vw + 1.05rem), 1.25rem);
   text-transform: uppercase;
   color: var(--blue-gray);
   letter-spacing: 1px;
@@ -831,7 +834,7 @@ a {
 
 .project-image-wrapper {
   position: relative;
-  max-height: 85vh;
+  max-height: 90vh;
   overflow: auto;
   overscroll-behavior: contain;
   scroll-snap-type: y mandatory;
@@ -881,18 +884,19 @@ a {
 
 .project-meta-title {
   font-family: 'Antonio', sans-serif;
-  font-size: 1.25rem;
+  font-size: clamp(0.75rem, calc(0.9vw + 1.05rem), 1.25rem);
   text-transform: uppercase;
   color: var(--dark-blue);
   letter-spacing: 1px;
 }
 
 .project-description {
-    font-family: 'Inter', sans-serif;
-  font-size: 1.25rem;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.1rem, calc(0.60vw + 1rem), 1.25rem);
   line-height: 1.7;
-  color: var(--mid-gray);
-  max-width: 65ch;
+  color: var(--black);
+  max-width: 40ch;
+  letter-spacing: -1px;
 }
 
 /* Project Details - Services & Tech Stack */
@@ -911,7 +915,7 @@ a {
 
 .project-details-meta-title {
   font-family: 'Antonio', sans-serif;
-  font-size: 1.25rem;
+  font-size: clamp(0.75rem, calc(0.9vw + 1.05rem), 1.25rem);
   text-transform: uppercase;
   color: var(--dark-blue);
   letter-spacing: 1px;
@@ -919,8 +923,10 @@ a {
 
 .project-details-meta-text {
   font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
-  color: var(--mid-gray);
+  font-size: clamp(1.1rem, calc(0.60vw + 1rem), 1.25rem);
+  max-width: 30ch;
+  letter-spacing: -1px;
+  color: var(--black);
   line-height: 1.5;
 }
 
@@ -928,7 +934,8 @@ a {
 
 .project-cta {
   display: flex;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
+  gap: 1rem;
 }
 
 /* Project Button - primary */
@@ -944,11 +951,11 @@ a {
   text-transform: uppercase;
   letter-spacing: .06em;
   font-weight: 800;
-  font-size: 0.95rem;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
   color: var(--cta-fg);
   background: var(--cta-bg);
   border: 2px solid var(--cta-border);
-  padding: 0.9rem 1.2rem;
+  padding: 1rem 1.5rem;
   line-height: 1;
   position: relative;
   transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
@@ -972,11 +979,11 @@ a {
   text-transform: uppercase;
   letter-spacing: .06em;
   font-weight: 800;
-  font-size: 0.95rem;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
   color: var(--cta-fg);
   background: var(--cta-bg);
   border: 2px solid var(--cta-border);
-  padding: 0.9rem 1.2rem;
+  padding: 1rem 1.5rem;
   line-height: 1;
   position: relative;
   transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;

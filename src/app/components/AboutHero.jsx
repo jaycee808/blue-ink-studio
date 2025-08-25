@@ -56,7 +56,7 @@ export default function AboutHero() {
                 <div className="approach-card">
                     <h4 className="approach-title">Structured</h4>
                     <p className="approach-desc">
-                    I work with grids to create order.Structure gives projects consistency, and the
+                    I work with grids to create order. Structure gives projects consistency, and the
                     flexibility to scale.
                     </p>
                 </div>

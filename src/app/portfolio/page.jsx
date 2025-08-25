@@ -59,13 +59,12 @@ export default async function PortfolioPage() {
 
                     {/* Project - Overview */}
                     <div className="project-content">
-                    <div className="project-overview">
-                        <h3 className="project-meta-title">Overview</h3>
-                        <p className="project-description">{project.description}</p>
-                    </div>
-                    
-                    {/* Project Meta Details - Services */}
-                    <div className="project-details-container">
+                        <div className="project-overview">
+                            <h3 className="project-meta-title">Overview</h3>
+                            <p className="project-description">{project.description}</p>
+                        </div>
+                        
+                        {/* Project Meta Details - Services */}
                         <div className="project-details-meta">
                             <div className="project-details-meta-block">
                             <h3 className="project-details-meta-title">Services</h3>
@@ -79,29 +78,28 @@ export default async function PortfolioPage() {
                         </div>
 
                         {/* Project CTA's */}
-                        <div className="project-ctas">
+                        <div className="project-cta">
                             {project.slug?.current && (
                             <a
-                                href={`/portfolio/${project.slug.current}`}
-                                className="project-btn project-btn-primary"
-                                aria-label={`View case study for ${project.title}`}
+                            href={`/portfolio/${project.slug.current}`}
+                            className="project-btn project-btn-primary"
+                            aria-label={`View case study for ${project.title}`}
                             >
-                                View Case Study
+                            View Case Study
                             </a>
                             )}
                             {project.url && (
                             <a
-                                href={project.url}
-                                className="project-btn project-btn-secondary"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={`Open live site for ${project.title}`}
+                            href={project.url}
+                            className="project-btn project-btn-secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Open live site for ${project.title}`}
                             >
-                                Live Site →
+                            Live Site →
                             </a>
                             )}
                         </div>
-                    </div>
                     </div>
                 </div>
                 </div>

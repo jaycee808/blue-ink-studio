@@ -218,7 +218,7 @@ a {
 
 /* Hero Buttons - Media Queries */
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 
   .hero-section {
     padding: 4rem 1.5rem;

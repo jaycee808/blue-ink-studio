@@ -35,52 +35,73 @@ export default async function PortfolioPage() {
                 A curated selection of projects across design, development, and creative direction.
             </p>
 
-            <div className="portfolio-full-stack">
+            {/* Project Display */}
+            <div className="portfolio-display">
             {projects.map((project) => (
-                <div key={project._id} className="portfolio-full-block">
-                <div className="portfolio-full-header">
-                    <h2 className="portfolio-full-heading">{project.title}</h2>
+                <div key={project._id} className="portfolio-display-block">
+                <div className="portfolio-display-header">
+                    <h2 className="portfolio-display-heading">{project.title}</h2>
                     {project.subheading && (
-                    <p className="portfolio-full-subheading">{project.subheading}</p>
+                    <p className="portfolio-display-subheading">{project.subheading}</p>
                     )}
                 </div>
-
-                <div className="portfolio-full-split">
-                    <div className="portfolio-full-image-wrapper">
+                {/* Project Content - Two Column Display */}
+                <div className="project-columns">
+                {/* Project Image */}
+                    <div className="project-image-wrapper">
                     <img
                         src={project.image?.asset?.url}
                         alt={project.title}
-                        className="portfolio-full-image"
+                        className="project-image"
                     />
                     </div>
+                    
 
-                    <div className="portfolio-full-content">
-                    <div className="portfolio-full-overview">
-                        <h3 className="portfolio-full-meta-title">Overview</h3>
-                        <p className="portfolio-full-description">{project.description}</p>
+                    {/* Project - Overview */}
+                    <div className="project-content">
+                    <div className="project-overview">
+                        <h3 className="project-meta-title">Overview</h3>
+                        <p className="project-description">{project.description}</p>
                     </div>
-
-                    <div className="portfolio-full-meta">
-                        <div className="portfolio-full-meta-block">
-                        <h3 className="portfolio-full-meta-title">Services</h3>
-                        <p className="portfolio-full-meta-text">{project.services?.join(' / ')}</p>
+                    
+                    {/* Project Meta Details - Services */}
+                    <div className="project-details-container">
+                        <div className="project-details-meta">
+                            <div className="project-details-meta-block">
+                            <h3 className="project-details-meta-title">Services</h3>
+                            <p className="project-details-meta-text">{project.services?.join(' / ')}</p>
+                            </div>
+                            <div className="project-details-meta-block">
+                            {/* Project Meta Details - Tech Stack */}
+                            <h3 className="project-details-meta-title">Tech Stack</h3>
+                            <p className="project-details-meta-text">{project.tech?.join(', ')}</p>
+                            </div>
                         </div>
-                        <div className="portfolio-full-meta-block">
-                        <h3 className="portfolio-full-meta-title">Tech Stack</h3>
-                        <p className="portfolio-full-meta-text">{project.tech?.join(', ')}</p>
+
+                        {/* Project CTA's */}
+                        <div className="project-ctas">
+                            {project.slug?.current && (
+                            <a
+                                href={`/portfolio/${project.slug.current}`}
+                                className="project-btn project-btn-primary"
+                                aria-label={`View case study for ${project.title}`}
+                            >
+                                View Case Study
+                            </a>
+                            )}
+                            {project.url && (
+                            <a
+                                href={project.url}
+                                className="project-btn project-btn-secondary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={`Open live site for ${project.title}`}
+                            >
+                                Live Site →
+                            </a>
+                            )}
                         </div>
                     </div>
-
-                    {project.url && (
-                        <a
-                        href={project.url}
-                        className="portfolio-full-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        >
-                        View Project →
-                        </a>
-                    )}
                     </div>
                 </div>
                 </div>

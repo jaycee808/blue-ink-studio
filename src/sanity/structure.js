@@ -3,9 +3,12 @@ export const structure = (S) =>
     .title('Content')
     .items([
       S.documentTypeListItem('project').title('Work'),
+      S.documentTypeListItem('services').title('Services'),
+      S.documentTypeListItem('packages').title('Packages'),
       S.documentTypeListItem('post').title('Articles'),
+  
       S.divider(),
       ...S.documentTypeListItems().filter(
-        (item) => item.getId() && !['project', 'post'].includes(item.getId())
+        (item) => item.getId() && !['project', 'services', 'packages', 'post'].includes(item.getId())
       ),
     ])

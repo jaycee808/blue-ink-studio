@@ -1,12 +1,10 @@
 export default {
-    name: 'post',
-    title: 'Articles',
+    name: 'services',
+    title: 'Services',
     type: 'document',
     fields: [
         { name: 'title', type: 'string' },
         { name: 'slug', type: 'slug', options: { source: 'title' } },
-        { name: 'publishedAt', type: 'datetime' },
-        { name: 'coverImage', type: 'image' },
         { name: 'content', type: 'array', of: [{ type: 'block' }] }
     ]
 }

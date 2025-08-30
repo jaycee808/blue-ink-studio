@@ -1,80 +1,126 @@
-import Link from "next/link";
-import { projectClient } from "@/sanity/lib/client";
+import { projectClient } from '../../sanity/lib/client.js'
 
-export const revalidate = 60;
+export const revalidate = 60
 
-async function getProjects(limit = 6) {
-    const query = `*[_type == "project"] | order(_createdAt desc)[0...${limit}]{
-        _id, title, slug, subheading, url,
-        image{ asset->{ url } }
-    }`;
-    return await projectClient.fetch(query);
+async function getProjects() {
+    const query = `*[_type == "project"] | order(_createdAt desc){
+        _id,
+        title,
+        slug,
+        subheading,
+        description,
+        services,
+        tech,
+        url,
+        image {
+        asset->{
+            _id,
+            url
+        }
+        }
+    }`
+
+    return await projectClient.fetch(query)
 }
 
-export default async function PortfolioHomeUniform() {
-    const projects = await getProjects(6);
-    if (!projects?.length) return null;
+export default async function PortfolioHeroSection() {
+    const projects = await getProjects()
+    // Retrieve first three projects
+    const featured = (projects || []).slice(0, 3)
 
     return (
-        <section className="portfolio-hero">
+        <section className="portfolio-hero-section" aria-labelledby="portfolio-hero-title">
         <div className="portfolio-hero-container">
-            <div className="portfolio-hero-header">
-            <span className="section-label-blue-bg">Selected Work</span>
-            <h2 className="portfolio-hero-title">Built with Bold Intent</h2>
+            <header className="portfolio-hero-head">
+            <span className="portfolio-hero-label">Portfolio</span>
+            <h2 id="portfolio-hero-title" className="portfolio-hero-title">
+                Digital Design with Purpose
+            </h2>
             <p className="portfolio-hero-intro">
-                A concise selection of recent projects across design and development.
+                An edit of recent projects. Visual first, details inside the case studies.
             </p>
-            </div>
+            </header>
 
-            <div className="portfolio-hero-grid">
-            {projects.map((p) => {
-                const href = p?.slug ? `/portfolio/${p.slug.current}` : p?.url || "#";
-                const isExternal = href?.startsWith("http");
+            <div className="portfolio-hero-list">
+            {featured.map((p) => (
+                <article key={p._id} className="portfolio-hero-card">
 
-                const Card = (
-                <article className="portfolio-hero-item" key={p._id}>
-                    <header className="portfolio-hero-item-header">
-                    <h3 className="portfolio-hero-item-title">{p.title}</h3>
-                    {p.subheading && <p className="portfolio-hero-item-sub">{p.subheading}</p>}
-                    </header>
+                {/* Left: Project Information */}
+                <div className="portfolio-hero-meta">
+                    <h3 className="portfolio-hero-projectTitle">{p.title}</h3>
+                    {p.subheading && <p className="portfolio-hero-tagline">{p.subheading}</p>}
 
-                <div className="portfolio-hero-image-wrap">
-                <img
-                    src={p?.image?.asset?.url}
-                    alt={p?.title || "Project image"}
-                    className="portfolio-hero-image"
-                    loading="lazy"
-                />
-                <div className="portfolio-hero-overlay">
-                    <span className="portfolio-hero-overlay-title">{p.title}</span>
+                    <div className="portfolio-hero-metaBlock">
+                    <h4 className="portfolio-hero-metaTitle">Services</h4>
+                    <ul className="portfolio-hero-metaList">
+                        {Array.isArray(p.services) ? (
+                        p.services.map((service, i) => (
+                            <li key={i} className="portfolio-hero-metaItem">
+                            {service}
+                            </li>
+                        ))
+                        ) : (
+                        <li className="portfolio-hero-metaItem">{p.services}</li>
+                        )}
+                    </ul>
+                    </div>
+
+                    <div className="portfolio-hero-metaBlock">
+                    <h4 className="portfolio-hero-metaTitle">Tech</h4>
+                    <p className="portfolio-hero-metaText">
+                        {Array.isArray(p.tech) ? p.tech.join(', ') : p.tech}
+                    </p>
+                    </div>
+
+                    <div className="portfolio-hero-ctas">
+                    {p.slug?.current && (
+                        <a
+                        href={`/portfolio/${p.slug.current}`}
+                        className="portfolio-hero-btn portfolio-hero-btnPrimary"
+                        aria-label={`View case study for ${p.title}`}
+                        >
+                        Case Study
+                        </a>
+                    )}
+                    {p.url && (
+                        <a
+                        href={p.url}
+                        className="portfolio-hero-btn portfolio-hero-btnSecondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Open live site for ${p.title}`}
+                        >
+                        Live Site →
+                        </a>
+                    )}
+                    </div>
                 </div>
-                </div>
-                    <span className="portfolio-hero-cta">View Project →</span>
-                </article>
-                );
 
-                return isExternal ? (
+                {/* Right: Project Image */}
                 <a
-                    key={p._id}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="portfolio-hero-linkwrap"
+                    href={p.slug?.current ? `/portfolio/${p.slug.current}` : '#'}
+                    className="portfolio-hero-imageLink"
+                    aria-label={`View ${p.title} case study`}
                 >
-                    {Card}
+                    <div className="hero-project-image-wrapper">
+                    <img
+                        src={p.image?.asset?.url}
+                        alt={p.title}
+                        className="hero-project-image"
+                        loading="lazy"
+                    />
+                    </div>
                 </a>
-                ) : (
-                <Link key={p._id} href={href} className="portfolio-hero-linkwrap">
-                    {Card}
-                </Link>
-                );
-            })}
+                </article>
+            ))}
             </div>
 
-            <div className="portfolio-hero-footer">
-            <Link href="/portfolio" className="portfolio-hero-button">View Full Portfolio</Link>
-            </div>
+            <footer className="portfolio-hero-foot">
+            <a href="/portfolio" className="portfolio-hero-btn portfolio-hero-btnOutline">
+                See All Projects
+            </a>
+            </footer>
         </div>
         </section>
-    );
+    )
 }

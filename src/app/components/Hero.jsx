@@ -3,7 +3,7 @@ export default function Hero() {
         <section className="hero-section">
         <div className="hero-container">
             <div className="hero-content">
-            <h1 className="hero-title">Digital Design<br />With Purpose</h1>
+            <h1 className="hero-title">Built to be Bold</h1>
 
             <div className="hero-description">
                 <p>Blue Ink Studio is an independent design and development studio built with intent.</p>

@@ -1,4 +1,6 @@
-export default {
+import { defineType } from 'sanity'
+
+export default defineType ({
     name: 'post',
     title: 'Articles',
     type: 'document',
@@ -9,4 +11,4 @@ export default {
         { name: 'coverImage', type: 'image' },
         { name: 'content', type: 'array', of: [{ type: 'block' }] }
     ]
-}
+})

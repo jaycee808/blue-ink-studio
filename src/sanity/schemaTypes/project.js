@@ -1,4 +1,6 @@
-export default {
+import { defineType, defineField } from 'sanity'
+
+export default defineType ({
     name: 'project',
     title: 'Work',
     type: 'document',
@@ -12,4 +14,4 @@ export default {
         { name: 'tech', type: 'array', of: [{ type: 'string' }] },
         { name: 'url', type: 'url' }
     ]
-}
+})

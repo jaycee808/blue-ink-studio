@@ -1733,8 +1733,6 @@ a {
   }
 }
 
-/* Case Study Styles */
-
 /* Footer */
 
 .footer {
@@ -1804,4 +1802,46 @@ a {
   .packages-full-section {
     padding: 2rem 1rem;
   }
+}
+
+/* Case Study Styles */
+
+.caseStudy-full-section {
+  background-color: var(--white);
+  padding: 6rem 1.5rem;
+  font-family: 'Inter Tight', sans-serif;
+  color: var(--black);
+}
+
+.caseStudy-full-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.caseStudy-full-label {
+  font-family: 'Antonio', sans-serif;
+  font-size: clamp(0.75rem, calc(0.9vw + 1.05rem), 1rem);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--blue-gray);
+}
+
+.caseStudy-full-title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(2.5rem, calc(3.8vw + 1.00rem), 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--blue);
+}
+
+.caseStudy-full-intro {
+  font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
+  line-height: 1.7;
+  max-width: 40ch;
+  letter-spacing: -0.5px;
+  color: var(--black);
 }

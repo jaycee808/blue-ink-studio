@@ -1,4 +1,6 @@
-export default {
+import { defineType } from 'sanity'
+
+export default defineType ({
     name: 'services',
     title: 'Services',
     type: 'document',
@@ -7,4 +9,4 @@ export default {
         { name: 'slug', type: 'slug', options: { source: 'title' } },
         { name: 'description', type: 'text' },
     ]
-}
+})

@@ -1,4 +1,6 @@
-export default {
+import { defineType } from 'sanity'
+
+export default defineType({
     name: 'packages',
     title: 'Packages',
     type: 'document',
@@ -10,4 +12,4 @@ export default {
         { name: 'packageItem', type: 'array', of: [{ type: 'string' }] },
         { name: 'price', type: 'number' },
     ]
-}
+})

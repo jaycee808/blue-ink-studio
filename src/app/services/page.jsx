@@ -8,7 +8,7 @@ const query = `
     _id, title, slug, description
     },
     "packages": *[_type == "packages"] | order(_createdAt asc){
-        _id, title, slug, description, bestFor, packageItem
+        _id, title, slug, description, bestFor, price, packageItem
     }
 }
 `
@@ -65,8 +65,7 @@ export default async function Services() {
                 <span className="packages-full-label">Packages</span>
                 <h2 id="packages-heading" className="packages-full-title">Inked with Intent</h2>
                 <p className="packages-full-intro">
-                Every brand starts at a different point. Whether you need a bold portfolio, a fully-functioning shop, or
-                booking built into your site — there’s a package designed to fit your vision.
+                Every brand has a different starting point. Whether you’re lighting the spark, levelling up, or fully establishing your online presence.There’s a package to suit your vision
                 </p>
 
                 {/* Packages Content */}
@@ -88,6 +87,9 @@ export default async function Services() {
                             ))}
                         </ul>
                         )}
+                    </div>
+                    <div className="packages-cost">
+                        <p>Prices starting from £{p.price}</p>
                     </div>
                     </article>
                 ))}

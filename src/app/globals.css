@@ -1360,53 +1360,76 @@ a {
 
 .packages-full-stack {
   display: grid;
-  gap: 2rem;
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
+  counter-reset: pkg;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .packages-full-item {
-  border: 2px solid var(--gray);
-  background: var(--white);
-  padding: 1.5rem;
+  counter-increment: pkg;
+  position: relative;
   display: grid;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  background: var(--white);
+  border: 2px solid var(--blue);
+  padding: clamp(1.25rem, 2.2vw, 2rem);
+  box-shadow: 12px 12px 0 0 var(--gray);
+  isolation: isolate;
+}
+
+.packages-full-item::after {
+  content: "0" counter(pkg);
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.4rem);
+  letter-spacing: 0.08em;
+  color: var(--white);
+  background: var(--blue);
+  border: 2px solid var(--blue);
+  padding: 1rem 1.5rem;
+  line-height: 1;
 }
 
 /* Package - Content */
 
 .packages-full-header {
   display: grid;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 
 .package-title {
   font-family: 'Antonio', sans-serif;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: clamp(1.5rem, 1.8vw + 0.6rem, 2.25rem);
-  letter-spacing: 0.03em;
-  color: var(--blue);
+  font-size: clamp(1.6rem, 2.2vw + 0.6rem, 2.6rem);
+  letter-spacing: 0.02em;
+  color: var(--black);
   margin: 0;
-  line-height: 1.12;
+  line-height: 1.2;
+  padding: 0.6rem 0 0.9rem 0;
+  border-bottom: 1px solid var(--gray);
+  position: relative;
 }
 
 .package-description {
-  font-size: clamp(1.05rem, 0.55vw + 0.95rem, 1.25rem);
-  line-height: 1.6;
+  font-size: clamp(1.05rem, 0.6vw + 0.95rem, 1.25rem);
+  line-height: 1.7;
   letter-spacing: -0.2px;
   color: var(--black);
   max-width: 65ch;
-  margin: 0.1rem 0 0 0;
+  margin: 0.35rem 0 0 0;
 }
 
 .package-label {
   font-family: 'Antonio', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: clamp(0.75rem, 0.8vw + 0.55rem, 0.95rem);
-  color: var(--blue-gray);
-  margin-top: 0.5rem;
+  font-size: clamp(0.72rem, 0.7vw + 0.55rem, 0.95rem);
+  color: var(--blue);
+  margin-top: 0.6rem;
 }
 
 .package-subtext {
@@ -1419,9 +1442,9 @@ a {
 .packages-full-split {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1.25rem;
   border-top: 1px solid var(--gray);
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
 }
 
 @media (min-width: 860px) {
@@ -1435,15 +1458,50 @@ a {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .packages-full-list li {
   position: relative;
-  padding-left: 1.25rem;
+  padding-left: 1.4rem;
   font-size: clamp(1rem, 0.5vw + 0.95rem, 1.15rem);
   line-height: 1.55;
   letter-spacing: -0.15px;
+  color: var(--black);
+}
+
+.packages-cost {
+  margin-top: 0.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.packages-cost p {
+  margin: 0;
+  font-family: 'Antonio', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: clamp(0.95rem, 0.7vw + 0.7rem, 1.05rem);
+  color: var(--white);
+  background: linear-gradient(90deg, var(--blue) 0%, var(--dark-blue) 100%);
+  border: 2px solid var(--blue);
+  padding: 0.55rem 0.8rem;
+  display: inline-block;
+}
+
+@media (max-width: 420px) {
+  .packages-full-item {
+    padding: 1rem;
+    box-shadow: 8px 8px 0 0 var(--gray);
+  }
+
+  .packages-full-item::after {
+    top: -12px;
+    right: -12px;
+  }
 }
 
 /* Services - Footer */
@@ -1731,5 +1789,15 @@ a {
   .about-section,
   .contact-section {
     padding: 4rem 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .service-page-outer-wrapper {
+    padding: 0rem;
+  }
+
+  .packages-full-section {
+    padding: 2rem 1rem;
   }
 }

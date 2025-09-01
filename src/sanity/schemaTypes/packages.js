@@ -8,5 +8,6 @@ export default {
         { name: 'description', type: 'text' },
         { name: 'bestFor', type: 'string' },
         { name: 'packageItem', type: 'array', of: [{ type: 'string' }] },
+        { name: 'price', type: 'number' },
     ]
 }

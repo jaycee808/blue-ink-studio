@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function AboutHero() {
     return (
-        <section className="about-section">
+        <section className="about-full-section">
         <div className="about-container two-col">
             {/* Hero About - Header : Left Column */}
             <div className="about-col-left">

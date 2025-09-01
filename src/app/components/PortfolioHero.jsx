@@ -44,73 +44,78 @@ export default async function PortfolioHeroSection() {
             <div className="portfolio-hero-list">
             {featured.map((p) => (
                 <article key={p._id} className="portfolio-hero-card">
-
-                {/* Left: Project Information */}
-                <div className="portfolio-hero-meta">
+                {/* Project Header */}
+                <header className="portfolio-hero-card-header">
                     <h3 className="portfolio-hero-projectTitle">{p.title}</h3>
                     {p.subheading && <p className="portfolio-hero-tagline">{p.subheading}</p>}
+                </header>
 
-                    <div className="portfolio-hero-metaBlock">
-                    <h4 className="portfolio-hero-metaTitle">Services</h4>
-                    <ul className="portfolio-hero-metaList">
-                        {Array.isArray(p.services) ? (
-                        p.services.map((service, i) => (
-                            <li key={i} className="portfolio-hero-metaItem">
-                            {service}
-                            </li>
-                        ))
-                        ) : (
-                        <li className="portfolio-hero-metaItem">{p.services}</li>
-                        )}
-                    </ul>
-                    </div>
-
-                    <div className="portfolio-hero-metaBlock">
-                    <h4 className="portfolio-hero-metaTitle">Tech</h4>
-                    <p className="portfolio-hero-metaText">
-                        {Array.isArray(p.tech) ? p.tech.join(', ') : p.tech}
-                    </p>
-                    </div>
-
-                    <div className="portfolio-hero-ctas">
-                    {p.slug?.current && (
-                        <a
-                        href={`/portfolio/${p.slug.current}`}
-                        className="portfolio-hero-btn portfolio-hero-btnPrimary"
-                        aria-label={`View case study for ${p.title}`}
-                        >
-                        Case Study
-                        </a>
-                    )}
-                    {p.url && (
-                        <a
-                        href={p.url}
-                        className="portfolio-hero-btn portfolio-hero-btnSecondary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Open live site for ${p.title}`}
-                        >
-                        Live Site →
-                        </a>
-                    )}
-                    </div>
-                </div>
-
-                {/* Right: Project Image */}
-                <a
+                {/* Project Content */}
+                <div className="portfolio-hero-card-content">
+                    {/* Left Column: Project Image */}
+                    <a
                     href={p.slug?.current ? `/portfolio/${p.slug.current}` : '#'}
                     className="portfolio-hero-imageLink"
                     aria-label={`View ${p.title} case study`}
-                >
+                    >
                     <div className="hero-project-image-wrapper">
-                    <img
+                        <img
                         src={p.image?.asset?.url}
                         alt={p.title}
                         className="hero-project-image"
                         loading="lazy"
-                    />
+                        />
                     </div>
-                </a>
+                    </a>
+
+                    {/* Right Column: Project Information */}
+                    <div className="portfolio-hero-meta">
+                    <div className="portfolio-hero-metaBlock">
+                        <h4 className="portfolio-hero-metaTitle">Services</h4>
+                        <ul className="portfolio-hero-metaList">
+                        {Array.isArray(p.services) ? (
+                            p.services.map((service, i) => (
+                            <li key={i} className="portfolio-hero-metaItem">
+                                {service}
+                            </li>
+                            ))
+                        ) : (
+                            <li className="portfolio-hero-metaItem">{p.services}</li>
+                        )}
+                        </ul>
+                    </div>
+
+                    <div className="portfolio-hero-metaBlock">
+                        <h4 className="portfolio-hero-metaTitle">Tech</h4>
+                        <p className="portfolio-hero-metaText">
+                        {Array.isArray(p.tech) ? p.tech.join(', ') : p.tech}
+                        </p>
+                    </div>
+
+                    <div className="portfolio-hero-ctas">
+                        {p.slug?.current && (
+                        <a
+                            href={`/portfolio/${p.slug.current}`}
+                            className="portfolio-hero-btn portfolio-hero-btnPrimary"
+                            aria-label={`View case study for ${p.title}`}
+                        >
+                            Case Study
+                        </a>
+                        )}
+                        {p.url && (
+                        <a
+                            href={p.url}
+                            className="portfolio-hero-btn portfolio-hero-btnSecondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`Open live site for ${p.title}`}
+                        >
+                            Live Site →
+                        </a>
+                        )}
+                    </div>
+                    </div>
+                </div>
                 </article>
             ))}
             </div>

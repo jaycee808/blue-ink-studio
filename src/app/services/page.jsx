@@ -24,9 +24,9 @@ export default async function Services() {
             {/* Services */}
             <section className="services-full-section" aria-labelledby="services-heading">
             <div className="services-full-container">
-                <span className="services-full-label">Services</span>
-                <h1 id="services-heading" className="services-full-title">Design. Code. Intent</h1>
-                <p className="services-full-intro">
+                <span className="services-full-label text-label">Services</span>
+                <h1 id="services-heading" className="services-full-title subheader">Design. Code. Intent</h1>
+                <p className="services-full-intro text-body">
                 Every site starts with strong foundations. From visual clarity, smart structure, and a brand story worth
                 telling, my services cover every step of bringing your website to life.
                 </p>
@@ -41,17 +41,17 @@ export default async function Services() {
                     id={s.slug?.current}
                     >
                     <div className="services-full-itemInner">
-                        <span className="services-full-number">{String(i + 1).padStart(2, '0')}</span>
-                        <h2 className="services-full-heading">{s.title}</h2>
-                        {s.description && <p className="services-full-text">{s.description}</p>}
+                        <span className="services-full-number text-label">{String(i + 1).padStart(2, '0')}</span>
+                        <h2 className="services-full-heading section-heading">{s.title}</h2>
+                        {s.description && <p className="services-full-text text-body">{s.description}</p>}
                     </div>
                     </article>
                 ))}
 
                 {services.length === 0 && (
                     <article className="services-full-item" role="listitem">
-                    <h2 className="services-full-heading">No services yet</h2>
-                    <p className="services-full-text">Add services in Sanity to see them here.</p>
+                    <h2 className="services-full-heading section-heading">No services yet</h2>
+                    <p className="services-full-text text-body">Add services in Sanity to see them here.</p>
                     </article>
                 )}
                 </div>
@@ -62,9 +62,9 @@ export default async function Services() {
             <section className="packages-full-section" aria-labelledby="packages-heading">
             <div className="packages-full-container">
                 {/* Packages Header */}
-                <span className="packages-full-label">Packages</span>
-                <h2 id="packages-heading" className="packages-full-title">Inked with Intent</h2>
-                <p className="packages-full-intro">
+                <span className="packages-full-label text-label">Packages</span>
+                <h2 id="packages-heading" className="packages-full-title subheader">Inked with Intent</h2>
+                <p className="packages-full-intro text-body">
                 Every brand has a different starting point. Whether you’re lighting the spark, levelling up, or fully establishing your online presence.There’s a package to suit your vision
                 </p>
 
@@ -73,15 +73,15 @@ export default async function Services() {
                 {packages.map((p, i) => (
                     <article key={p._id || i} className="packages-full-item" id={p.slug?.current}>
                     <header className="packages-full-header">
-                        <h3 className="package-title">{p.title}</h3>
-                        {p.description && <p className="package-description">{p.description}</p>}
-                        <div className="package-label">Best For:</div>
-                        {p.bestFor && <div className="package-subtext">{p.bestFor}</div>}
+                        <h3 className="package-title section-heading-lrg">{p.title}</h3>
+                        {p.description && <p className="package-description text-body">{p.description}</p>}
+                        <div className="package-label text-label">Best For:</div>
+                        {p.bestFor && <div className="package-subtext text-body">{p.bestFor}</div>}
                     </header>
 
                     <div className="packages-full-split">
                         {Array.isArray(p.packageItem) && p.packageItem.length > 0 && (
-                        <ul className="packages-full-list">
+                        <ul className="packages-full-list text-list">
                             {p.packageItem.map((item, idx) => (
                             <li key={idx}>{item}</li>
                             ))}
@@ -89,7 +89,7 @@ export default async function Services() {
                         )}
                     </div>
                     <div className="packages-cost">
-                        <p>Prices starting from £{p.price}</p>
+                        <p className="btn-text">Prices starting from £{p.price}</p>
                     </div>
                     </article>
                 ))}
@@ -97,8 +97,8 @@ export default async function Services() {
                 {packages.length === 0 && (
                     <article className="packages-full-item">
                     <div className="packages-full-header">
-                        <span className="packages-full-label">No packages yet</span>
-                        <h3 className="packages-full-heading">Add packages in Sanity to see them here.</h3>
+                        <span className="packages-full-label section-heading">No packages yet</span>
+                        <h3 className="packages-full-heading text-body">Add packages in Sanity to see them here.</h3>
                     </div>
                     </article>
                 )}
@@ -106,7 +106,7 @@ export default async function Services() {
 
                 {/* Footer CTA */}
                 <footer className="packages-full-cta">
-                <p className="packages-full-intro">
+                <p className="packages-full-intro text-body">
                     Not every project fits neatly into a package. If you’ve got something unique in mind, I’ll tailor a proposal to suit your goals.
                 </p>
                 </footer>

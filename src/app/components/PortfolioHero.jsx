@@ -32,11 +32,11 @@ export default async function PortfolioHeroSection() {
         <section className="portfolio-hero-section" aria-labelledby="portfolio-hero-title">
         <div className="portfolio-hero-container">
             <header className="portfolio-hero-head">
-            <span className="portfolio-hero-label">Portfolio</span>
-            <h2 id="portfolio-hero-title" className="portfolio-hero-title">
+            <span className="portfolio-hero-label text-label">Portfolio</span>
+            <h2 id="portfolio-hero-title" className="portfolio-hero-title subheader">
                 Digital Design with Purpose
             </h2>
-            <p className="portfolio-hero-intro">
+            <p className="portfolio-hero-intro text-body">
                 An edit of recent projects. Visual first, details inside the case studies.
             </p>
             </header>
@@ -46,8 +46,8 @@ export default async function PortfolioHeroSection() {
                 <article key={p._id} className="portfolio-hero-card">
                 {/* Project Header */}
                 <header className="portfolio-hero-card-header">
-                    <h3 className="portfolio-hero-projectTitle">{p.title}</h3>
-                    {p.subheading && <p className="portfolio-hero-tagline">{p.subheading}</p>}
+                    <h3 className="portfolio-hero-projectTitle subheader">{p.title}</h3>
+                    {p.subheading && <p className="portfolio-hero-tagline text-label">{p.subheading}</p>}
                 </header>
 
                 {/* Project Content */}
@@ -71,8 +71,8 @@ export default async function PortfolioHeroSection() {
                     {/* Right Column: Project Information */}
                     <div className="portfolio-hero-meta">
                     <div className="portfolio-hero-metaBlock">
-                        <h4 className="portfolio-hero-metaTitle">Services</h4>
-                        <ul className="portfolio-hero-metaList">
+                        <h4 className="portfolio-hero-metaTitle section-heading">Services</h4>
+                        <ul className="portfolio-hero-metaList text-body">
                         {Array.isArray(p.services) ? (
                             p.services.map((service, i) => (
                             <li key={i} className="portfolio-hero-metaItem">
@@ -80,14 +80,14 @@ export default async function PortfolioHeroSection() {
                             </li>
                             ))
                         ) : (
-                            <li className="portfolio-hero-metaItem">{p.services}</li>
+                            <li className="portfolio-hero-metaItem text-body">{p.services}</li>
                         )}
                         </ul>
                     </div>
 
                     <div className="portfolio-hero-metaBlock">
-                        <h4 className="portfolio-hero-metaTitle">Tech</h4>
-                        <p className="portfolio-hero-metaText">
+                        <h4 className="portfolio-hero-metaTitle section-heading">Tech</h4>
+                        <p className="portfolio-hero-metaText text-body">
                         {Array.isArray(p.tech) ? p.tech.join(', ') : p.tech}
                         </p>
                     </div>
@@ -96,7 +96,7 @@ export default async function PortfolioHeroSection() {
                         {p.slug?.current && (
                         <a
                             href={`/portfolio/${p.slug.current}`}
-                            className="portfolio-hero-btn portfolio-hero-btnPrimary"
+                            className="portfolio-hero-btn portfolio-hero-btnPrimary btn-text"
                             aria-label={`View case study for ${p.title}`}
                         >
                             Case Study
@@ -105,7 +105,7 @@ export default async function PortfolioHeroSection() {
                         {p.url && (
                         <a
                             href={p.url}
-                            className="portfolio-hero-btn portfolio-hero-btnSecondary"
+                            className="portfolio-hero-btn portfolio-hero-btnSecondary btn-text"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={`Open live site for ${p.title}`}
@@ -121,7 +121,7 @@ export default async function PortfolioHeroSection() {
             </div>
 
             <footer className="portfolio-hero-foot">
-            <a href="/portfolio" className="portfolio-hero-btn portfolio-hero-btnOutline">
+            <a href="/portfolio" className="portfolio-hero-btn portfolio-hero-btnOutline btn-text">
                 See All Projects
             </a>
             </footer>

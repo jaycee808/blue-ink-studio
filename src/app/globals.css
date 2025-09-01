@@ -32,7 +32,7 @@ a {
 .header {
   font-family: 'Anton', sans-serif;
   font-size: clamp(3rem, calc(5.2vw + 1.00rem), 6rem);
-  letter-spacing: -0.5px;
+  letter-spacing: 1px;
   line-height: 1.4;
 }
 
@@ -51,12 +51,21 @@ a {
   line-height: 1.4;
 }
 
-.section-header {
+.section-heading-lrg {
+  font-family: 'Antonio', sans-serif;
+  font-size: clamp(2.5rem, calc(1.6vw + 1rem), 4rem);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
+
+.section-heading {
   font-family: 'Antonio', sans-serif;
   font-size: clamp(1.25rem, calc(1.6vw + 1rem), 1.5rem);
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.6;
+  text-transform: uppercase;
 }
 
 .text-body {
@@ -70,6 +79,7 @@ a {
 .btn-text {
   font-family: 'Antonio', sans-serif;
   font-size: clamp(1rem, 1.3vw, 1.5rem);
+  font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
@@ -79,8 +89,16 @@ a {
 .text-list {
   font-family: 'Inter', sans-serif; 
   font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
-  line-height: 1.4;
+  font-weight: 300;
+  line-height: 1.2;
   letter-spacing: -0.5px;
+}
+
+.footer-text {
+  font-family: 'Antonio', sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
+  letter-spacing: 1px;
+  line-height: 1.7;
 }
 
 /* Navbar & Hero Background Image */
@@ -530,7 +548,7 @@ a {
 
 .hero-project-image-wrapper {
   position: relative;
-  max-height: 50vh;
+  max-height: 65vh;
   overflow: auto;
   overscroll-behavior: contain;
   scroll-snap-type: y mandatory;
@@ -923,10 +941,12 @@ a {
 }
 
 .portfolio-display-heading {
+  color: var(--blue);
   border-bottom: 1px solid var(--mid-gray)
 }
 
 .portfolio-display-subheading {
+  text-transform: uppercase;
   color: var(--blue-gray);
 }
 
@@ -953,7 +973,7 @@ a {
 
 .project-image-wrapper {
   position: relative;
-  max-height: 90vh;
+  max-height: 100vh;
   overflow: auto;
   overscroll-behavior: contain;
   scroll-snap-type: y mandatory;
@@ -1206,33 +1226,15 @@ a {
 
 .packages-full-stack {
   display: grid;
-  counter-reset: pkg;
   gap: 2.5rem;
   margin-top: 2rem;
   padding-top: 2rem;
 }
 
 .packages-full-item {
-  counter-increment: pkg;
   position: relative;
   display: grid;
   gap: 1.25rem;
-  background: var(--white);
-  border: 2px solid var(--blue);
-  padding: clamp(1.25rem, 2.2vw, 2rem);
-  box-shadow: 12px 12px 0 0 var(--gray);
-  isolation: isolate;
-}
-
-.packages-full-item::after {
-  content: "0" counter(pkg);
-  position: absolute;
-  top: -14px;
-  right: -14px;
-  color: var(--white);
-  background: var(--blue);
-  border: 2px solid var(--blue);
-  padding: 1rem 1.5rem;
 }
 
 /* Package - Content */
@@ -1244,7 +1246,7 @@ a {
 
 .package-title {
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--blue);
   margin: 0;
   padding: 0.6rem 0 0.9rem 0;
   border-bottom: 1px solid var(--gray);

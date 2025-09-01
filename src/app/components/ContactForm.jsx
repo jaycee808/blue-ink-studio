@@ -40,8 +40,9 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit} className="contact-form" noValidate>
         <div className="form-grid">
             <div className="form-group">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name" className="text-label">Name</label>
             <input
+                className="text-body"
                 id="name"
                 type="text"
                 autoComplete="name"
@@ -52,8 +53,9 @@ export default function ContactForm() {
             </div>
 
             <div className="form-group">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" className="text-label">Email</label>
             <input
+                className="text-body"
                 id="email"
                 type="email"
                 autoComplete="email"
@@ -66,8 +68,9 @@ export default function ContactForm() {
         </div>
 
         <div className="form-group">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message" className="text-label">Message</label>
             <textarea
+            className="text-body"
             id="message"
             rows={6}
             value={form.message}
@@ -77,7 +80,7 @@ export default function ContactForm() {
         </div>
 
         <div className="form-footer">
-            <button type="submit" className="submit-button" disabled={submitting}>
+            <button type="submit" className="submit-button btn-text" disabled={submitting}>
             {submitting ? 'Sending…' : 'Send Message'}
             </button>
             <p className="form-status" role="status" aria-live="polite">

@@ -1652,3 +1652,39 @@ a {
 .caseStudy-block h3 {
   color: var(--blue-gray);
 }
+
+/* Colour Palette Display */
+
+.colour-palette {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.colour-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--gray);
+  border-radius: 0.5rem;
+  background: var(--white);
+}
+
+.colour-swatch-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--gray);
+}
+
+.colour-swatch-name {
+  text-transform: uppercase;
+}
+
+.colour-swatch-hex {
+  font-size: 0.75rem;
+  color: var(--mid-gray);
+}

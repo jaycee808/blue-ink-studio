@@ -66,13 +66,30 @@ export default function ForwardTogether() {
             <p className="text-body">{cs.brandDirection.logo}</p>
 
             <h3 className="section-heading">Colour Palette</h3>
-            <ul className="text-list">
-                {Object.entries(cs.brandDirection.colourPalette).map(([name, hex]) => (
-                <li key={name}>
-                    <span className="swatch" style={{ background: hex }} /> {name}: {hex}
-                </li>
-                ))}
-            </ul>
+
+            {/* Primary Palette */}
+            <h4 className="text-label">Primary</h4>
+            <div className="colour-palette">
+            {Object.entries(cs.brandDirection.colourPalette.primary).map(([name, hex]) => (
+                <div className="colour-swatch" key={name}>
+                <span className="colour-swatch-box" style={{ background: hex }} />
+                <span className="colour-swatch-name text-label">{name}</span>
+                <span className="colour-swatch-hex text-body">{hex}</span>
+                </div>
+            ))}
+            </div>
+
+            {/* Secondary Palette */}
+            <h4 className="text-label">Secondary</h4>
+            <div className="colour-palette">
+            {Object.entries(cs.brandDirection.colourPalette.secondary).map(([name, hex]) => (
+                <div className="colour-swatch" key={name}>
+                <span className="colour-swatch-box" style={{ background: hex }} />
+                <span className="colour-swatch-name text-label">{name}</span>
+                <span className="colour-swatch-hex text-body">{hex}</span>
+                </div>
+            ))}
+            </div>
 
             <h3 className="section-heading">Typography</h3>
             <ul className="text-list">

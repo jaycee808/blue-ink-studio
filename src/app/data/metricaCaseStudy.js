@@ -29,14 +29,18 @@ export const metricaCaseStudy = {
         logo:
         "I wanted the logo to be a reflection of the artwork. I used layered abstract artwork with rough concrete textures and vibrant colours.",
         colourPalette: {
-            White: "#F5F6F6",
-            Black: "#1F1F21",
-            Pink: "#EF004B",
-            Navy: "#07083C",
-            "Blue/Purple": "#374593",
-            "LightGray": "#E9ECEF",
-            "Mid-Gray": "#404F68",
-            "Dark Gray": "#333333",
+            primary: {
+                White: "#F5F6F6",
+                Black: "#1F1F21",
+                Pink: "#EF004B",
+                Navy: "#07083C",
+                "Blue/Purple": "#374593",
+            },
+            secondary: {
+                "Light Gray": "#E9ECEF",
+                "Mid-Gray": "#404F68",
+                "Dark Gray": "#333333",
+            }
         },
         typography: {
         Logo: "Special Gothic Expanded One",

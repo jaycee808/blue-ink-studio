@@ -30,12 +30,16 @@ export const forwardCaseStudy = {
         logo:
         "I recreated the 4WARD2GETHER logo in Affinity Designer, refining the form for consistency across digital use.",
         colourPalette: {
-            Pink: "#FF0076",
-            Blue: "#0C13B1",
-            Teal: "#22797A",
-            Purple: "#9E19E2",
-            White: "#F2F2F2",
-            Black: "#2E2E2E",
+            primary: {
+                Pink: "#FF0076",
+                Blue: "#0C13B1",
+                Teal: "#22797A",
+                Purple: "#9E19E2",
+            },
+            secondary: {
+                White: "#F2F2F2",
+                Black: "#2E2E2E",
+            }
         },
         typography: {
         "Logo & Body" : "Baloo 2 – rounded, approachable, playful.",

@@ -27,12 +27,16 @@ export const atlasCaseStudy = {
         logo:
         "A minimal wordmark paired with strong geometric type. A silver gradient was chosen over gold for the logo to create contrast on the dark background, while gold was reserved as the accent colour.",
         colourPalette: {
-        White: "#FAFAFA",
-        Black: "#0F0F0F",
-        Gold: "#C0882C",
-        "Light Gray": "#E4E7EA",
-        "Mid-Gray": "#A1A0A0",
-        "Dark Gray": "#2C2C2C",
+            primary: {
+                White: "#FAFAFA",
+                Black: "#0F0F0F",
+                Gold: "#C0882C",
+            },
+            secondary: {
+                "Light Gray": "#E4E7EA",
+                "Mid-Gray": "#A1A0A0",
+                "Dark Gray": "#2C2C2C",
+            }            
         },
         typography: {
         Logo: "Lexend Giga",

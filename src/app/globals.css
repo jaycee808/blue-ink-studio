@@ -1653,16 +1653,36 @@ a {
   color: var(--blue-gray);
 }
 
+.caseStudy-content,
+.caseStudy-block,
+.caseStudy-full-container {
+  min-width: 0;
+}
+
+/* Case Study Logo */
+
+.atlas-logo-figure {
+  background: #0F0F0F;
+}
+
+.caseStudy-logo-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
 /* Colour Palette Display */
 
 .colour-palette {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin: 1.5rem 0;
 }
 
 .colour-swatch {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -1687,4 +1707,56 @@ a {
 .colour-swatch-hex {
   font-size: 0.75rem;
   color: var(--mid-gray);
+}
+
+/* Screenshot Display */
+
+.screenshots-carousel {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.screenshots-grid {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+.screenshot-card {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  flex: 0 0 80vw;
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  .screenshot-card {
+    flex-basis: 50vw;
+  }
+}
+
+.screenshot-viewport {
+  position: relative;
+  height: clamp(320px, 60vh, 720px);
+  overflow: auto;
+  background: var(--light-gray);
+  border: 2px solid var(--gray);
+}
+
+.screenshot-viewport img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: var(--white);
+}
+
+@media (max-width: 800px) {
+  .screenshot-viewport {
+    height: clamp(320px, 40vh, 720px);
+  }
 }

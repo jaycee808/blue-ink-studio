@@ -26,6 +26,7 @@ export const atlasCaseStudy = {
     brandDirection: {
         logo:
         "A minimal wordmark paired with strong geometric type. A silver gradient was chosen over gold for the logo to create contrast on the dark background, while gold was reserved as the accent colour.",
+        logoImage: "/atlas-logo.svg",
         colourPalette: {
             primary: {
                 White: "#FAFAFA",
@@ -80,6 +81,12 @@ export const atlasCaseStudy = {
         description:
         "The final outcome for Atlas is a site that is bold, and visually striking. The hero section establishes an immediate presence with oversized typography and a commanding brand statement, setting the tone for the entire experience. The coaching page presents services in an editorial style, pairing clarity with impact, while the origins section tells the brand story with mythical undertones that reinforce the philosophy behind the name. A streamlined contact and call-to-action section ensures booking is simple and direct. Built with a mobile-first approach, the design scales across devices, maintaining its sharp, disciplined aesthetic from desktop to phone.",
         link: "https://atlas-training.vercel.app",
+        screenshots: {
+            hero: "/atlas-1-landing.png",
+            coaching: "/atlas-2-coaching.png",
+            booking: "/atlas-3-book.png",
+            contact: "/atlas-4-contact.png",
+        }
     },
     reflection: {
         learnings:

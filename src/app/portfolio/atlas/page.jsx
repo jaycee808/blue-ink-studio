@@ -65,30 +65,42 @@ export default function Atlas() {
             <h3 className="section-heading">Logo</h3>
             <p className="text-body">{cs.brandDirection.logo}</p>
 
+            {/* Logo Image */}
+            {cs.brandDirection?.logoImage && (
+                <figure className="atlas-logo-figure">
+                <img
+                    src={cs.brandDirection.logoImage}
+                    alt="Atlas logo"
+                    className="caseStudy-logo-image"
+                    loading="lazy"
+                />
+                </figure>
+            )}
+
             <h3 className="section-heading">Colour Palette</h3>
 
             {/* Primary Palette */}
             <h4 className="text-label">Primary</h4>
             <div className="colour-palette">
-            {Object.entries(cs.brandDirection.colourPalette.primary).map(([name, hex]) => (
+                {Object.entries(cs.brandDirection.colourPalette.primary).map(([name, hex]) => (
                 <div className="colour-swatch" key={name}>
-                <span className="colour-swatch-box" style={{ background: hex }} />
-                <span className="colour-swatch-name text-label">{name}</span>
-                <span className="colour-swatch-hex text-body">{hex}</span>
+                    <span className="colour-swatch-box" style={{ background: hex }} />
+                    <span className="colour-swatch-name text-label">{name}</span>
+                    <span className="colour-swatch-hex text-body">{hex}</span>
                 </div>
-            ))}
+                ))}
             </div>
 
             {/* Secondary Palette */}
             <h4 className="text-label">Secondary</h4>
             <div className="colour-palette">
-            {Object.entries(cs.brandDirection.colourPalette.secondary).map(([name, hex]) => (
+                {Object.entries(cs.brandDirection.colourPalette.secondary).map(([name, hex]) => (
                 <div className="colour-swatch" key={name}>
-                <span className="colour-swatch-box" style={{ background: hex }} />
-                <span className="colour-swatch-name text-label">{name}</span>
-                <span className="colour-swatch-hex text-body">{hex}</span>
+                    <span className="colour-swatch-box" style={{ background: hex }} />
+                    <span className="colour-swatch-name text-label">{name}</span>
+                    <span className="colour-swatch-hex text-body">{hex}</span>
                 </div>
-            ))}
+                ))}
             </div>
 
             <h3 className="section-heading">Typography</h3>
@@ -181,6 +193,69 @@ export default function Atlas() {
                 View Live Site
                 </a>
             </p>
+
+            {/* Screenshots */}
+            {cs.finalOutcome?.screenshots && (
+            <>
+                <h3 className="section-heading">Screenshots</h3>
+
+                <div
+                className="screenshots-carousel"
+                role="list"
+                aria-label="Atlas screenshots carousel"
+                >
+                {/* Hero */}
+                <article className="screenshot-card" role="listitem" tabIndex={0}>
+                    <figcaption className="text-label">Hero</figcaption>
+                    <figure className="screenshot-viewport">
+                    <img
+                        src={cs.finalOutcome.screenshots.hero}
+                        alt="Atlas Hero Page"
+                        loading="lazy"
+                    />
+                    </figure>
+                </article>
+
+                {/* Coaching */}
+                <article className="screenshot-card" role="listitem" tabIndex={0}>
+                    <figcaption className="text-label">Coaching</figcaption>
+                    <figure className="screenshot-viewport">
+                    <img
+                        src={cs.finalOutcome.screenshots.coaching}
+                        alt="Atlas Coaching Page"
+                        loading="lazy"
+                    />
+                    </figure>
+                </article>
+
+                {/* Booking */}
+                <article className="screenshot-card" role="listitem" tabIndex={0}>
+                    <figcaption className="text-label">Booking</figcaption>
+                    <figure className="screenshot-viewport">
+                    <img
+                        src={cs.finalOutcome.screenshots.booking}
+                        alt="Atlas Booking Page"
+                        loading="lazy"
+                    />
+                    </figure>
+                </article>
+
+                {/* Contact */}
+                <article className="screenshot-card" role="listitem" tabIndex={0}>
+                    <figcaption className="text-label">Contact</figcaption>
+                    <figure className="screenshot-viewport">
+                    <img
+                        src={cs.finalOutcome.screenshots.contact}
+                        alt="Atlas Contact Page"
+                        loading="lazy"
+                    />
+                    </figure>
+                </article>
+                </div>
+            </>
+            )}
+
+
             </div>
         </div>
 

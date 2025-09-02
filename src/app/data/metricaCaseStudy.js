@@ -28,19 +28,20 @@ export const metricaCaseStudy = {
     brandDirection: {
         logo:
         "I wanted the logo to be a reflection of the artwork. I used layered abstract artwork with rough concrete textures and vibrant colours.",
+        logoImage: "/metrica-logo.png",
         colourPalette: {
-            primary: {
-                White: "#F5F6F6",
-                Black: "#1F1F21",
-                Pink: "#EF004B",
-                Navy: "#07083C",
-                "Blue/Purple": "#374593",
-            },
-            secondary: {
-                "Light Gray": "#E9ECEF",
-                "Mid-Gray": "#404F68",
-                "Dark Gray": "#333333",
-            }
+        primary: {
+            White: "#F5F6F6",
+            Black: "#1F1F21",
+            Pink: "#EF004B",
+            Navy: "#07083C",
+            Indigo: "#374593",
+        },
+        secondary: {
+            "Light Gray": "#E9ECEF",
+            "Mid-Gray": "#404F68",
+            "Dark Gray": "#333333",
+        },
         },
         typography: {
         Logo: "Special Gothic Expanded One",
@@ -70,12 +71,7 @@ export const metricaCaseStudy = {
         "Refined layouts to preserve the immersive gallery feel across mobile and tablet.",
     },
     developmentProcess: {
-        techStack: [
-        "Next.js (App Router)",
-        "Sanity CMS",
-        "Snipcart",
-        "Tailwind CSS",
-        ],
+        techStack: ["Next.js (App Router)", "Sanity CMS", "Snipcart", "Tailwind CSS"],
         featuresBuilt: [
         "Sanity CMS-driven artwork catalogue with product pages.",
         "Snipcart cart integration with custom UI styling.",
@@ -90,6 +86,12 @@ export const metricaCaseStudy = {
         description:
         "Metrica delivers an immersive online gallery experience that merges editorial layouts with functional e-commerce. Desktop and mobile layouts maintain a bold, structured look. Product pages treat artworks as showcases first and sales items second. A subtle yet effective cart and checkout flow keeps the design front and centre.",
         link: "https://metrica-one.vercel.app/",
+        screenshots: {
+        hero: "/metrica-1-landing.png",
+        collections: "/metrica-2-collections.png",
+        collection: "/metrica-3-collection.png",
+        gallery: "/metrica-4-gallery.png",
+        },
     },
     reflection: {
         learnings:

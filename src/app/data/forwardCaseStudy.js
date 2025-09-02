@@ -29,20 +29,21 @@ export const forwardCaseStudy = {
     brandDirection: {
         logo:
         "I recreated the 4WARD2GETHER logo in Affinity Designer, refining the form for consistency across digital use.",
+        logoImage: "/forward-logo.svg",
         colourPalette: {
-            primary: {
-                Pink: "#FF0076",
-                Blue: "#0C13B1",
-                Teal: "#22797A",
-                Purple: "#9E19E2",
-            },
-            secondary: {
-                White: "#F2F2F2",
-                Black: "#2E2E2E",
-            }
+        primary: {
+            Pink: "#FF0076",
+            Blue: "#0C13B1",
+            Teal: "#22797A",
+            Purple: "#9E19E2",
+        },
+        secondary: {
+            White: "#F2F2F2",
+            Black: "#2E2E2E",
+        },
         },
         typography: {
-        "Logo & Body" : "Baloo 2 – rounded, approachable, playful.",
+        "Logo & Body": "Baloo 2 – rounded, approachable, playful.",
         Headings: "Inter – clean, readable, versatile.",
         },
         inspiration: [
@@ -82,6 +83,11 @@ export const forwardCaseStudy = {
         description:
         "The new 4WARD2GETHER site feels colourful, modern, and welcoming. At the forefront, the hero section combines an animated gradient with bold typography to create an immediate sense of energy and impact. This is followed by a structured, grid-based About section that introduces the mission and team with clarity and balance. The News & Events area brings in Instagram integration to keep the site dynamic and connected to the community, while the Contact page rounds off the experience with a clean form and playful dividers that make reaching out simple and inviting.",
         link: "https://www.4ward2gether.com/",
+        screenshots: {
+        hero: "/forward-1-landing.png",
+        news: "/forward-2-news.png",
+        team: "/forward-3-team.png",
+        },
     },
     reflection: {
         learnings:

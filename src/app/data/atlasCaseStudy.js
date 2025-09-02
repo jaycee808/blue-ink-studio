@@ -35,10 +35,10 @@ export const atlasCaseStudy = {
         "Dark Gray": "#2C2C2C",
         },
         typography: {
-        logo: "Lexend Giga",
-        headers: "Lexend Deca",
-        body: "Inter",
-        cursive: "Island Moments",
+        Logo: "Lexend Giga",
+        Headers: "Lexend Deca",
+        Body: "Inter",
+        Cursive: "Island Moments",
         },
         inspiration: [
         "Swiss graphic design",

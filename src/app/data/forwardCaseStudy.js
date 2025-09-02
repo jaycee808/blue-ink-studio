@@ -38,8 +38,8 @@ export const forwardCaseStudy = {
             Black: "#2E2E2E",
         },
         typography: {
-        headings: "Baloo 2 – rounded, approachable, playful.",
-        body: "Inter – clean, readable, versatile.",
+        "Logo & Body" : "Baloo 2 – rounded, approachable, playful.",
+        Headings: "Inter – clean, readable, versatile.",
         },
         inspiration: [
         "Neo-brutalist design & Swiss graphic design (bold type, geometric layouts).",

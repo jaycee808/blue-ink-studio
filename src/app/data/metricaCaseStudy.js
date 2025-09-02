@@ -39,9 +39,9 @@ export const metricaCaseStudy = {
             "Dark Gray": "#333333",
         },
         typography: {
-        logo: "Special Gothic Expanded One",
-        subheadings: "Special Gothic Condensed One",
-        body: "Special Gothic",
+        Logo: "Special Gothic Expanded One",
+        Headings: "Special Gothic Condensed One",
+        Body: "Special Gothic",
         },
         inspiration: [
         "Swiss editorial layouts",

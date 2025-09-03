@@ -234,39 +234,8 @@ a {
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
   color: var(--white);
-  max-width: 45ch;
+  max-width: 42ch;
 }
-
-/* Hero Buttons */
-
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.hero-button-primary,
-.hero-button-secondary {
-  display: inline-flex;
-  padding: 1rem 1.5rem;
-  transition: transform .15s ease, box-shadow .15s ease, background-color .2s;
-}
-
-.hero-button-primary {
-  background: var(--white);
-  color: var(--blue);
-  box-shadow: 0 2px 0 rgba(0,0,0,.15);
-}
-
-.hero-button-secondary {
-  border: 1px solid var(--white);
-  color: var(--white);
-  background: transparent;
-}
-.hero-button-secondary:hover { 
-  background: rgba(255,255,255,.08); 
-}
-
-/* Hero Buttons - Media Queries */
 
 @media (max-width: 768px) {
 
@@ -274,19 +243,56 @@ a {
     display: grid;
     grid-template-columns: 1fr;
   }
-
-  .hero-button-primary,
-  .hero-button-secondary {
-    flex: 1;
-    padding: .75rem 1rem;
-  }
-
-  .hero-button-primary p,
-  .hero-button-secondary p {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
+
+/* Hero - Services - CTA */
+
+.hero-cta {
+  margin-top: 1.25rem;
+}
+
+.hero-btn-cta {
+  --cta-bg: var(--white);
+  --cta-fg: var(--blue);
+  --cta-border: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-transform: uppercase;
+  color: var(--cta-fg);
+  background: var(--cta-bg);
+  border: 2px solid var(--cta-border);
+  padding: 1rem 1.5rem;
+  position: relative;
+  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.hero-btn-cta:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(38, 0, 255, 0.15), 0 0 0 6px rgba(38, 0, 255, 0.15);
+}
+
+.hero-btn-cta:hover {
+  transform: translateY(-1px);
+  background: var(--blue);
+  color: var(--white);
+}
+
+.hero-btn-cta:active {
+  transform: translateY(0);
+}
+
+.hero-btn-cta-icon {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 180ms ease;
+}
+
+.hero-btn-cta:hover .about-btn-cta-icon {
+  transform: translateX(3px);
+}
+
+
 
 /* About Page */
 

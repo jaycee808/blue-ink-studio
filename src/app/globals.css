@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Island+Moments&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Baloo+2:wght@400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Island+Moments&family=Lexend+Deca:wght@100..900&family=Lexend+Giga:wght@100..900&family=Special+Gothic+Condensed+One&family=Special+Gothic+Expanded+One&family=Special+Gothic:wght@400..700&display=swap');
 
 :root {
   --white: #F7F9FC;
@@ -25,6 +25,15 @@ html, body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  list-style-type: circle;
+}
+
+li {
+  margin-left: 1rem;
 }
 
 /* Typography System */
@@ -70,7 +79,7 @@ a {
 
 .text-body {
   font-family: 'Inter', sans-serif; 
-  font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
+  font-size: clamp(1rem, calc(0.60vw + 1rem), 1.25rem);
   font-weight: 300;
   line-height: 1.4;
   letter-spacing: -0.5px;
@@ -88,7 +97,7 @@ a {
 
 .text-list {
   font-family: 'Inter', sans-serif; 
-  font-size: clamp(1.25rem, calc(0.60vw + 1rem), 1.5rem);
+  font-size: clamp(0.75rem, calc(0.60vw + 1rem), 1.25rem);
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: -0.5px;
@@ -100,6 +109,57 @@ a {
   letter-spacing: 1px;
   line-height: 1.7;
 }
+
+/* Font Classes for Case Studies */
+
+/* Baloo 2 */
+.font-baloo {
+  font-family: "Baloo 2", cursive;
+}
+
+/* Inter */
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+/* Island Moments */
+.font-island {
+  font-family: "Island Moments", cursive;
+  font-size: 2.5rem;
+}
+
+/* Lexend Deca */
+.font-lexend-deca {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Lexend Giga */
+.font-lexend-giga {
+  font-family: "Lexend Giga", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Special Gothic Condensed One */
+.font-gothic-condensed {
+  font-family: "Special Gothic Condensed One", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Special Gothic Expanded One */
+.font-gothic-expanded {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Special Gothic */
+.font-gothic {
+  font-family: "Special Gothic", sans-serif;
+}
+
 
 /* Navbar & Hero Background Image */
 
@@ -585,7 +645,6 @@ a {
 }
 
 .portfolio-hero-metaList {
-  list-style: inside;
   margin: 0;
   padding: 0;
   display: grid;
@@ -1013,6 +1072,11 @@ a {
 
 /* Project Details - Services & Tech Stack */
 
+.project-service-tech-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .project-details-meta {
   display: flex;
   flex-direction: column;
@@ -1150,7 +1214,6 @@ a {
   padding: 1.5rem;
 }
 
-
 .services-full-itemInner {
   display: grid;
   align-items: start;
@@ -1267,7 +1330,6 @@ a {
 }
 
 .packages-full-list {
-  list-style: inside;
   margin: 0;
   padding: 0;
   display: grid;
@@ -1297,18 +1359,6 @@ a {
   border: 2px solid var(--blue);
   padding: 0.55rem 0.8rem;
   display: inline-block;
-}
-
-@media (max-width: 420px) {
-  .packages-full-item {
-    padding: 1rem;
-    box-shadow: 8px 8px 0 0 var(--gray);
-  }
-
-  .packages-full-item::after {
-    top: -12px;
-    right: -12px;
-  }
 }
 
 /* Services - Footer */
@@ -1388,7 +1438,6 @@ a {
 }
 
 .meta-list {
-  list-style: inside;
   padding: 0;
   margin: 0;
   display: grid;
@@ -1598,8 +1647,7 @@ a {
   color: var(--blue);
 }
 
-.caseStudy-full-intro {
-  max-width: 40ch;
+.caseStudy-tagline {
   color: var(--blue-gray);
   text-transform: uppercase;
 }
@@ -1622,8 +1670,12 @@ a {
 }
 }
 
-.caseStudy-content {
-  padding: 2rem 0;
+.caseStudy-subheading {
+  padding: 1rem 0rem;
+}
+
+.caseStudy-text {
+  margin-bottom: 2rem;
 }
 
 .caseStudy-block h2 {
@@ -1643,7 +1695,10 @@ a {
 /* Case Study Logo */
 
 .atlas-logo-figure {
-  background: #0F0F0F;
+  background: var(--black);
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--gray);
+  border-radius: 0.5rem;
 }
 
 .caseStudy-logo-image {
@@ -1652,7 +1707,48 @@ a {
   height: auto;
 }
 
+/* Typography Grid */
+
+.typography-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.typography-grid-item {
+  border: 1px solid var(--gray);
+  border-radius: 0.5rem;
+  background: var(--white);
+  padding: 2rem 1.5rem;
+  flex-grow: 1;
+  width: 40%;
+}
+
+@media (max-width: 600px) {
+  .typography-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .typography-grid-item {
+    width: 100%;
+  }
+}
+
+.font-heading {
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gray);
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+}
+
 /* Colour Palette Display */
+
+.palette-title {
+  text-transform: uppercase
+}
 
 .colour-palette {
   display: flex;

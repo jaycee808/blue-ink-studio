@@ -7,7 +7,7 @@ export default function Atlas() {
         <div className="caseStudy-full-container">
             <span className="caseStudy-full-label text-label">Case Study</span>
             <h1 className="caseStudy-full-title subheader">{cs.title}</h1>
-            <p className="caseStudy-full-intro text-label">{cs.tagline}</p>
+            <p className="caseStudy-tagline text-label">{cs.tagline}</p>
         </div>
 
         {/* Overview */}
@@ -33,22 +33,22 @@ export default function Atlas() {
             <h2 className="subheader">Objectives</h2>
             </div>
             <div className="caseStudy-content">
-            <h3 className="section-heading">Strategy</h3>
-            <ul className="text-list">
+            <h3 className="caseStudy-subheading section-heading">Strategy</h3>
+            <ul className="caseStudy-text text-list">
                 {cs.objectivesStrategy.objectives.map((o, i) => (
                 <li key={i}>{o}</li>
                 ))}
             </ul>
 
-            <h3 className="section-heading">Target Audience</h3>
-            <ul className="text-list">
+            <h3 className="caseStudy-subheading section-heading">Target Audience</h3>
+            <ul className="caseStudy-text text-list">
                 {cs.objectivesStrategy.targetAudience.map((t, i) => (
                 <li key={i}>{t}</li>
                 ))}
             </ul>
 
-            <h3 className="section-heading">Requirements</h3>
-            <ul className="text-list">
+            <h3 className="caseStudy-subheading section-heading">Requirements</h3>
+            <ul className="caseStudy-text text-list">
                 {cs.objectivesStrategy.requirements.map((r, i) => (
                 <li key={i}>{r}</li>
                 ))}
@@ -62,8 +62,8 @@ export default function Atlas() {
             <h2 className="subheader">Brand Direction</h2>
             </div>
             <div className="caseStudy-content">
-            <h3 className="section-heading">Logo</h3>
-            <p className="text-body">{cs.brandDirection.logo}</p>
+            <h3 className="caseStudy-subheading section-heading">Logo</h3>
+            <p className="caseStudy-text text-body">{cs.brandDirection.logo}</p>
 
             {/* Logo Image */}
             {cs.brandDirection?.logoImage && (
@@ -77,42 +77,54 @@ export default function Atlas() {
                 </figure>
             )}
 
-            <h3 className="section-heading">Colour Palette</h3>
+            <h3 className="caseStudy-subheading section-heading">Colour Palette</h3>
 
             {/* Primary Palette */}
-            <h4 className="text-label">Primary</h4>
+            <h4 className="palette-title text-label">Primary</h4>
             <div className="colour-palette">
                 {Object.entries(cs.brandDirection.colourPalette.primary).map(([name, hex]) => (
                 <div className="colour-swatch" key={name}>
                     <span className="colour-swatch-box" style={{ background: hex }} />
                     <span className="colour-swatch-name text-label">{name}</span>
-                    <span className="colour-swatch-hex text-body">{hex}</span>
+                    <span className="colour-swatch-hex caseStudy-text text-body">{hex}</span>
                 </div>
                 ))}
             </div>
 
             {/* Secondary Palette */}
-            <h4 className="text-label">Secondary</h4>
+            <h4 className="palette-title text-label">Secondary</h4>
             <div className="colour-palette">
                 {Object.entries(cs.brandDirection.colourPalette.secondary).map(([name, hex]) => (
                 <div className="colour-swatch" key={name}>
                     <span className="colour-swatch-box" style={{ background: hex }} />
                     <span className="colour-swatch-name text-label">{name}</span>
-                    <span className="colour-swatch-hex text-body">{hex}</span>
+                    <span className="colour-swatch-hex caseStudy-text text-body">{hex}</span>
                 </div>
                 ))}
             </div>
 
-            <h3 className="section-heading">Typography</h3>
-            <ul className="text-list">
-                {Object.entries(cs.brandDirection.typography).map(([k, v]) => (
-                <li key={k}>
-                    <strong>{k}:</strong> {v}
-                </li>
-                ))}
-            </ul>
+            {/* Typography */}
+            <h3 className="caseStudy-subheading section-heading">Typography</h3>
+                <div className="caseStudy-text text-body typography-grid">
+                    <div className="typography-grid-item">
+                        <div className="font-heading">Logo</div>
+                            <div className="font-type font-lexend-giga">Lexend Giga</div>
+                    </div>
+                    <div className="typography-grid-item">
+                        <div className="font-heading">Headings</div>
+                        <div className="font-type font-lexend-deca">Lexend deca</div>
+                    </div>
+                    <div className="typography-grid-item">
+                        <div className="font-heading">Body</div>
+                        <div className="font-type font-inter">Inter</div>
+                    </div>
+                    <div className="typography-grid-item">
+                        <div className="font-heading">Cursive</div>
+                            <div className="font-type font-island">Island Moments</div>
+                    </div>
+                </div>
 
-            <h3 className="section-heading">Inspiration</h3>
+            <h3 className="caseStudy-subheading section-heading">Inspiration</h3>
             <ul className="text-list">
                 {cs.brandDirection.inspiration.map((i, idx) => (
                 <li key={idx}>{i}</li>
@@ -127,20 +139,20 @@ export default function Atlas() {
             <h2 className="subheader">Design Process</h2>
             </div>
             <div className="caseStudy-content">
-            <h3 className="section-heading">Wireframes</h3>
-            <p className="text-body">{cs.designProcess.wireframes}</p>
+            <h3 className="caseStudy-subheading section-heading">Wireframes</h3>
+            <p className="caseStudy-text text-body">{cs.designProcess.wireframes}</p>
 
-            <h3 className="section-heading">Hierarchy & Layout</h3>
-            <p className="text-body">{cs.designProcess.hierarchy}</p>
+            <h3 className="caseStudy-subheading section-heading">Hierarchy & Layout</h3>
+            <p className="caseStudy-text text-body">{cs.designProcess.hierarchy}</p>
 
-            <h3 className="section-heading">Design Decisions</h3>
+            <h3 className="caseStudy-subheading section-heading">Design Decisions</h3>
             <ul className="text-list">
                 {cs.designProcess.designDecisions.map((d, i) => (
                 <li key={i}>{d}</li>
                 ))}
             </ul>
 
-            <h3 className="section-heading">Accessibility</h3>
+            <h3 className="caseStudy-subheading section-heading">Accessibility</h3>
             <ul className="text-list">
                 {cs.designProcess.accessibility.map((a, i) => (
                 <li key={i}>{a}</li>
@@ -155,22 +167,22 @@ export default function Atlas() {
             <h2 className="subheader">Development Process</h2>
             </div>
             <div className="caseStudy-content">
-            <h3 className="section-heading">Tech Stack</h3>
+            <h3 className="caseStudy-subheading section-heading">Tech Stack</h3>
             <ul className="text-list">
                 {cs.developmentProcess.techStack.map((t, i) => (
                 <li key={i}>{t}</li>
                 ))}
             </ul>
 
-            <h3 className="section-heading">Features Built</h3>
+            <h3 className="caseStudy-subheading section-heading">Features Built</h3>
             <ul className="text-list">
                 {cs.developmentProcess.featuresBuilt.map((f, i) => (
                 <li key={i}>{f}</li>
                 ))}
             </ul>
 
-            <h3 className="section-heading">Challenges Solved</h3>
-            <ul className="text-list">
+            <h3 className="caseStudy-subheading section-heading">Challenges Solved</h3>
+            <ul className="caseStudy-text text-list">
                 {cs.developmentProcess.challengesSolved.map((c, i) => (
                 <li key={i}>{c}</li>
                 ))}
@@ -184,11 +196,11 @@ export default function Atlas() {
             <h2 className="subheader">Final Outcome</h2>
             </div>
             <div className="caseStudy-content">
-            <h3 className="section-heading">Description</h3>
-            <p className="text-body">{cs.finalOutcome.description}</p>
+            <h3 className="caseStudy-subheading section-heading">Description</h3>
+            <p className="caseStudy-text text-body">{cs.finalOutcome.description}</p>
 
-            <h3 className="section-heading">Live Site</h3>
-            <p className="text-body">
+            <h3 className="caseStudy-subheading section-heading">Live Site</h3>
+            <p className="caseStudy-text text-body">
                 <a className="btn-text" href={cs.finalOutcome.link} target="_blank" rel="noreferrer">
                 View Live Site
                 </a>
@@ -196,66 +208,64 @@ export default function Atlas() {
 
             {/* Screenshots */}
             {cs.finalOutcome?.screenshots && (
-            <>
-                <h3 className="section-heading">Screenshots</h3>
+                <>
+                <h3 className="caseStudy-subheading section-heading">Screenshots</h3>
 
                 <div
-                className="screenshots-carousel"
-                role="list"
-                aria-label="Atlas screenshots carousel"
+                    className="screenshots-carousel"
+                    role="list"
+                    aria-label="Atlas screenshots carousel"
                 >
-                {/* Hero */}
-                <article className="screenshot-card" role="listitem" tabIndex={0}>
+                    {/* Hero */}
+                    <article className="screenshot-card" role="listitem" tabIndex={0}>
                     <figcaption className="text-label">Hero</figcaption>
                     <figure className="screenshot-viewport">
-                    <img
+                        <img
                         src={cs.finalOutcome.screenshots.hero}
                         alt="Atlas Hero Page"
                         loading="lazy"
-                    />
+                        />
                     </figure>
-                </article>
+                    </article>
 
-                {/* Coaching */}
-                <article className="screenshot-card" role="listitem" tabIndex={0}>
+                    {/* Coaching */}
+                    <article className="screenshot-card" role="listitem" tabIndex={0}>
                     <figcaption className="text-label">Coaching</figcaption>
                     <figure className="screenshot-viewport">
-                    <img
+                        <img
                         src={cs.finalOutcome.screenshots.coaching}
                         alt="Atlas Coaching Page"
                         loading="lazy"
-                    />
+                        />
                     </figure>
-                </article>
+                    </article>
 
-                {/* Booking */}
-                <article className="screenshot-card" role="listitem" tabIndex={0}>
+                    {/* Booking */}
+                    <article className="screenshot-card" role="listitem" tabIndex={0}>
                     <figcaption className="text-label">Booking</figcaption>
                     <figure className="screenshot-viewport">
-                    <img
+                        <img
                         src={cs.finalOutcome.screenshots.booking}
                         alt="Atlas Booking Page"
                         loading="lazy"
-                    />
+                        />
                     </figure>
-                </article>
+                    </article>
 
-                {/* Contact */}
-                <article className="screenshot-card" role="listitem" tabIndex={0}>
+                    {/* Contact */}
+                    <article className="screenshot-card" role="listitem" tabIndex={0}>
                     <figcaption className="text-label">Contact</figcaption>
                     <figure className="screenshot-viewport">
-                    <img
+                        <img
                         src={cs.finalOutcome.screenshots.contact}
                         alt="Atlas Contact Page"
                         loading="lazy"
-                    />
+                        />
                     </figure>
-                </article>
+                    </article>
                 </div>
-            </>
+                </>
             )}
-
-
             </div>
         </div>
 
@@ -265,14 +275,14 @@ export default function Atlas() {
             <h2 className="subheader">Reflection</h2>
             </div>
             <div className="caseStudy-content">
-            <h3 className="section-heading">Learnings</h3>
-            <p className="text-body">{cs.reflection.learnings}</p>
+            <h3 className="caseStudy-subheading section-heading">What I Learned</h3>
+            <p className="caseStudy-text text-body">{cs.reflection.learnings}</p>
 
-            <h3 className="section-heading">What I’d Improve</h3>
-            <p className="text-body">{cs.reflection.improvements}</p>
+            <h3 className="caseStudy-subheading section-heading">What I’d Improve</h3>
+            <p className="caseStudy-text text-body">{cs.reflection.improvements}</p>
 
-            <h3 className="section-heading">Value</h3>
-            <p className="text-body">{cs.reflection.value}</p>
+            <h3 className="caseStudy-subheading section-heading">Value</h3>
+            <p className="caseStudy-text text-body">{cs.reflection.value}</p>
             </div>
         </div>
         </section>

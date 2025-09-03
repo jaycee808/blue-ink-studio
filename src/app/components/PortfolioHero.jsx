@@ -85,12 +85,12 @@ export default async function PortfolioHeroSection() {
                         </ul>
                     </div>
 
-                    <div className="portfolio-hero-metaBlock">
+                    {/* <div className="portfolio-hero-metaBlock">
                         <h4 className="portfolio-hero-metaTitle section-heading">Tech</h4>
                         <p className="portfolio-hero-metaText text-body">
                         {Array.isArray(p.tech) ? p.tech.join(', ') : p.tech}
                         </p>
-                    </div>
+                    </div> */}
 
                     <div className="portfolio-hero-ctas">
                         {p.slug?.current && (

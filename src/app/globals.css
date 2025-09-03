@@ -252,47 +252,22 @@ a {
 }
 
 .hero-btn-cta {
-  --cta-bg: var(--white);
-  --cta-fg: var(--blue);
-  --cta-border: var(--blue);
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   text-transform: uppercase;
-  color: var(--cta-fg);
-  background: var(--cta-bg);
-  border: 2px solid var(--cta-border);
+  color: var(--blue);
+  background: var(--white);
+  border: 2px solid var(--white);
   padding: 1rem 1.5rem;
   position: relative;
-  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
-}
-
-.hero-btn-cta:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(38, 0, 255, 0.15), 0 0 0 6px rgba(38, 0, 255, 0.15);
 }
 
 .hero-btn-cta:hover {
-  transform: translateY(-1px);
-  background: var(--blue);
+  background: transparent;
   color: var(--white);
+  border: 1px solid var(--white);
 }
-
-.hero-btn-cta:active {
-  transform: translateY(0);
-}
-
-.hero-btn-cta-icon {
-  display: inline-block;
-  transform: translateX(0);
-  transition: transform 180ms ease;
-}
-
-.hero-btn-cta:hover .about-btn-cta-icon {
-  transform: translateX(3px);
-}
-
-
 
 /* About Page */
 
@@ -554,7 +529,7 @@ a {
 
 .hero-project-image-wrapper {
   position: relative;
-  max-height: 65vh;
+  max-height: 50vh;
   overflow: auto;
   overscroll-behavior: contain;
   scroll-snap-type: y mandatory;

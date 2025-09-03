@@ -64,11 +64,14 @@ export default async function PortfolioPage() {
                             <p className="project-description text-body">{project.description}</p>
                         </div>
                         
+                        
                         {/* Project Meta Details - Services */}
                         <div className="project-details-meta">
                             <div className="project-details-meta-block">
                             <h3 className="project-details-meta-title section-heading">Services</h3>
-                            <p className="project-details-meta-text text-list">{project.services?.join(' / ')}</p>
+                            <ul className="project-details-meta-text text-list">
+                            {project.services?.join(' / ')}
+                            </ul>
                             </div>
                             <div className="project-details-meta-block">
                             {/* Project Meta Details - Tech Stack */}

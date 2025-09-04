@@ -1473,7 +1473,7 @@ li {
 .contact-form textarea {
   padding: 0.9rem 0.95rem;
   background-color: var(--white);
-  border: 2px solid var(--blue-gray);
+  border: 2px solid var(--gray);
   color: var(--black);
   transition: border 0.2s ease, background-color 0.2s ease;
 }

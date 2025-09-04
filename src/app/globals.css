@@ -160,7 +160,6 @@ li {
   font-family: "Special Gothic", sans-serif;
 }
 
-
 /* Navbar & Hero Background Image */
 
 .bg-image {
@@ -173,7 +172,7 @@ li {
   background-color: var(--blue);
 }
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .bg-image {
     background-size: cover;
     background-attachment: fixed;
@@ -184,7 +183,10 @@ li {
 
 .navbar {
   position: relative;
-  padding: 1.5rem 5.5rem;
+  padding-left: clamp(1rem, 5vw, 6rem);
+  padding-right: clamp(1rem, 5vw, 6rem);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   top: 0;
   z-index: 100;
 }
@@ -194,39 +196,28 @@ li {
   flex-direction: column;
 }
 
+/* Logo */
+
 .logo {
-  display: block;
-  height: auto;
+  display: flex;
+  align-items: flex-start;
 }
 
 .logo-image {
   position: relative;
-  width: 600px;
-  height: 200px;
-}
-
-/* Navbar & Logo Media Query */
-
-@media only screen and (max-width: 400px) {
-  
-  .navbar {
-    padding: 0.75rem 1rem;
-
-  }
-  
-  .logo-image {
-    width: 320px;
-    height: 120px;
-  }
+  width: clamp(320px, 80vw, 800px);
+  aspect-ratio: 4/1;
 }
 
 .logo-img {
-  object-fit: contain;
+  object-fit: stretch;
+  object-position: left;  
 }
 
 .nav-links {
   display: flex;
   align-items: center;
+  margin-top: 0.75rem;
   gap: 3rem;
   font-family: 'Antonio', sans-serif;
   font-size: clamp(1.25rem, calc(4.2vw), 1.5rem);
@@ -258,7 +249,7 @@ li {
 
 /* Nav Links Media Query */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
   .nav-links {
     gap: 1rem;
   }
@@ -267,14 +258,17 @@ li {
 /* Hero Banner */
 
 .hero-section {
-  padding: 6rem 1.5rem;
+  padding-left: clamp(1rem, 5vw, 6rem);
+  padding-right: clamp(1rem, 5vw, 6rem);
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  height: 90dvh;
 }
 
 .hero-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -302,6 +296,7 @@ li {
   .hero-description {
     display: grid;
     grid-template-columns: 1fr;
+    max-width: 30ch;
   }
 }
 
@@ -337,21 +332,24 @@ li {
   background-position: top;
   background-repeat: no-repeat;
   background-color: var(--white);
-  padding: 6rem 1.5rem;
+  padding-left: clamp(1rem, 5vw, 6rem);
+  padding-right: clamp(1rem, 5vw, 6rem);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   color: var(--black);
 }
 
 .about-container.two-col {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: 3rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 600px) {
   .about-container.two-col {
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr;
     gap: 6rem;
     align-items: start;
   }
@@ -372,12 +370,6 @@ li {
 
 .about-col-left .intro-text {
   max-width: 32ch;
-}
-
-@media (min-width: 900px) {
-  .about-col-left .intro-stack {
-    max-width: 56ch;
-  }
 }
 
 /* About - Right Column */
@@ -419,13 +411,13 @@ li {
 
 .approach-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 800px) {
   .approach-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
 }
@@ -455,18 +447,6 @@ li {
   margin-top: 0.25rem;
 }
 
-/* Media Queries for About Hero Section */
-
-@media (max-width: 900px) {
-  .about-container.two-col {
-    gap: 4rem;
-  }
-
-  .approach-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-}
 
 /* Hero - About - CTA */
 
@@ -526,7 +506,10 @@ li {
 
 .portfolio-hero-section {
   background: var(--white);
-  padding: clamp(3rem, 5vw, 6rem) 1.5rem;
+  padding-left: clamp(1rem, 5vw, 6rem);
+  padding-right: clamp(1rem, 5vw, 6rem);
+  padding-top: 6rem;
+  padding-bottom: 4rem;
   color: var(--black);
 }
 
@@ -609,7 +592,7 @@ li {
 
 /* Media Query for project image */
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .hero-project-image-wrapper {
     position: relative;
     max-height: 45vh;
@@ -719,7 +702,10 @@ li {
 
 .services-section {
   background-color: var(--white);
-  padding: 6rem 1.5rem;
+  padding-left: clamp(1rem, 5vw, 6rem);
+  padding-right: clamp(1rem, 5vw, 6rem);
+  padding-top: 6rem;
+  padding-bottom: 4rem;
   color: var(--black);
 }
 
@@ -753,8 +739,17 @@ li {
 
 .services-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+/* Services Grid Media Queries */
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
 }
 
 .service-item {
@@ -832,21 +827,15 @@ li {
   }
 }
 
-/* Services Grid Media Queries */
-
-@media (min-width: 900px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
-  }
-}
 
 /* Hero - Contact Section */
 
 .contact-section {
   background-color: var(--blue);
   color: var(--white);
-  padding: 6rem 1.5rem;
+  padding-left: clamp(1rem, 5vw, 6rem);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -1607,7 +1596,8 @@ li {
   .services-section,
   .about-section,
   .contact-section {
-    padding: 4rem 1rem;
+    padding-left: clamp(1rem, 5vw, 6rem);
+    padding-top: 5rem; 
   }
 }
 

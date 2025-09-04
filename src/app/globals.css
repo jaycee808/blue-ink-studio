@@ -40,8 +40,8 @@ li {
 
 .header {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(3rem, calc(5.2vw + 1.00rem), 6rem);
-  letter-spacing: 1px;
+  font-size: clamp(4rem, calc(5.2vw + 1.00rem), 6rem);
+  letter-spacing: 2px;
   line-height: 1.4;
 }
 
@@ -249,7 +249,7 @@ li {
 
 /* Nav Links Media Query */
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .nav-links {
     gap: 1rem;
   }
@@ -273,7 +273,6 @@ li {
 }
 
 .hero-content {
-  max-width: 960px;
   display: grid;
   gap: 2rem;
 }
@@ -281,6 +280,15 @@ li {
 .hero-title {
   color: var(--white);
   margin: 0;
+  text-transform: uppercase;
+  /* color: transparent;
+  -webkit-text-stroke: 1px var(--white); */
+}
+
+@media (max-width: 800px) {
+  .hero-title {
+    max-width: 7ch;
+  }
 }
 
 .hero-description {
@@ -343,7 +351,6 @@ li {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
   gap: 3rem;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -514,7 +521,6 @@ li {
 }
 
 .portfolio-hero-container {
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -710,7 +716,6 @@ li {
 }
 
 .services-container {
-  max-width: 1200px;
   margin: 0 auto;
   text-align: left;
   display: flex;
@@ -842,7 +847,6 @@ li {
 }
 
 .contact-container {
-  max-width: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -923,12 +927,14 @@ li {
 
 .portfolio-full-section {
   background-color: var(--white);
-  padding: 6rem 1.5rem;
+  padding-left: clamp(1rem, 5vw, 6rem);
+  padding-right: clamp(1rem, 5vw, 6rem);
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
   color: var(--black);
 }
 
 .portfolio-full-container {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -1146,12 +1152,14 @@ li {
 
 .service-page-outer-wrapper {
   background-color: var(--white);
-  padding: 6rem 1.5rem;
+  padding-left: clamp(1rem, 5vw, 6rem);
+  padding-right: clamp(1rem, 5vw, 6rem);
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
   color: var(--black);
 }
 
 .services-page-container {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -1361,12 +1369,14 @@ li {
 
 .contact-page-section {
   background-color: var(--white);
-  padding: 6rem 1.5rem;
+  padding-left: clamp(1rem, 5vw, 6rem);
+  padding-right: clamp(1rem, 5vw, 6rem);
+  padding-top: 6rem;
+  padding-bottom: 1.5rem;
   color: var(--black);
 }
 
 .contact-page-container {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -1615,12 +1625,14 @@ li {
 
 .caseStudy-full-section {
   background-color: var(--white);
-  padding: 6rem 1.5rem;
+  padding-left: clamp(1rem, 5vw, 6rem);
+  padding-right: clamp(1rem, 5vw, 6rem);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   color: var(--black);
 }
 
 .caseStudy-full-container {
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -1645,7 +1657,6 @@ li {
 /* Case Study Content */
 
 .caseStudy-block {
-  max-width: 1200px;
   margin: 4rem auto 0;
   padding-top: 2.5rem;
   border-top: 1px solid var(--blue-gray);
@@ -1654,7 +1665,7 @@ li {
   gap: 1.25rem 2rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .caseStudy-block {
   grid-template-columns: 1fr;
 }

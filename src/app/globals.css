@@ -1627,7 +1627,7 @@ li {
   background-color: var(--white);
   padding-left: clamp(1rem, 5vw, 6rem);
   padding-right: clamp(1rem, 5vw, 6rem);
-  padding-top: 1.5rem;
+  padding-top: 6rem;
   padding-bottom: 1.5rem;
   color: var(--black);
 }
